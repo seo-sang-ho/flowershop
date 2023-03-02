@@ -1,0 +1,127 @@
+*{
+    margin: 0 auto;
+    padding:0;
+    box-sizing: border-box;
+}
+#wrap{margin-top: 50px;}
+
+#wrap2{
+    padding-top: 4%;
+}
+
+.okbtn:focus{
+    background-color: rgb(114, 77, 124);
+}
+.okbtn:hover{
+    background-color: rgb(119, 89, 139);
+
+}
+#optxt{
+    font-size: small;
+    background-color: #f0f0f0;
+}
+.amount{
+   width: 1000px;
+   margin-left: -240px;
+   text-align: center;
+   margin-top: 10%;
+}
+.add1{
+    position: relative;
+    margin-left: 50px;
+    text-align: center;
+}
+.addnum{
+    display: flex;
+    width:40%;
+    margin-left: 60%;
+}
+.addpo{
+   display: relative;
+}
+.divs{
+	width:342px;
+	height:166px;
+}
+
+/*  */
+#thr{
+    width: 86%;
+    text-align: center;
+}
+.amount2{
+    margin-left: 6%;
+
+}
+table{
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  width: 900px;
+  border: none;
+  margin:auto;
+}
+td{
+  padding: 0 2px;
+}
+tr{
+    border:1px solid #FFFFFF;
+}
+.paybtn{width: 30%;
+  height: 50px;
+  font-size: larger;
+  background-color: rgb(127, 95, 131);
+  border: none;
+  margin-top: 10%;
+  border-radius: 7px;
+  color: #FFFFFF;
+  margin-bottom:30px;
+
+}
+.paybtn:focus {
+    background-color: rgb(114, 77, 124);
+    }
+    
+.paybtn:hover{
+    background:rgb(119, 89, 139);
+}    
+#paybtnd{
+    
+   text-align: center;
+}
+
+.add_f{
+    font-size: 10px;
+}
+#rows{
+    vertical-align: middle;
+}
+/* 주문자 정보 */
+.ordinfo{
+    margin-right: 5%;
+    margin-top: 20px;}
+    
+.ordinfo td input{
+    width: 200px;
+    
+}    
+
+/* 배송정보 */
+.del{
+    margin-top: 20px; 
+    margin-left: 4%;
+}
+.del th{
+    margin-left: 2%;
+}
+.delin{
+   width: 200px; margin-right: 5%;
+}
+/* 결제정보 */
+.pay{
+    margin-top: 20px; 
+    margin-left: 0.5%;
+    
+}
+
+

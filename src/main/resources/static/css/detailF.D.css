@@ -1,0 +1,159 @@
+*{
+    padding: 0;
+    margin:0 auto;
+    font-family: 'Noto Serif KR', serif;
+
+    box-sizing: border-box;
+    list-style-type:none;
+}
+body html{
+    width: 100%;
+    height:100%;
+   
+}
+
+
+@media all and (min-width: 768px){
+    #wrap{
+        width: 100%;
+        height:1000px;
+       
+    }
+
+    .dic{
+        width:70%;
+        height:380px;
+        border: 1px solid #cccccc;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        justify-content: space-around;
+        margin-top: 6%;
+        height:450px;
+        z-index: 2;
+        background-color: #ffffff;
+        border-radius: 10px;
+    }
+    .dicimg{
+        width:60%;
+        flex-grow: 1;
+       flex-shrink: 1;
+        flex-basis: auto;
+
+    }
+    .dicimg1{
+        margin-top: 27%;
+        margin-left: 10%;
+        width:200px;
+        height:300px;
+    }
+    .dicex{
+        width:60%;
+        flex-grow: 1;
+       flex-shrink: 1;
+        flex-basis: auto;
+        margin-top: 27%;
+        font-size:large;
+        font-weight: 600;
+        
+        
+
+
+    }
+    .dicex p{
+        margin-bottom: 5%;
+    }
+
+    .btn{
+        text-align: center;
+        margin-top: 10%;
+    }
+    #bbtn {
+        width: 300px;
+        height: 50px;
+        background-color: black;
+        color: #ffffff;
+        font-size: larger;
+        border-radius: 10px;
+        border: none;
+		line-height:50px;
+        
+    }
+
+	a {
+	text-decoration:none;}
+}
+
+@media all and (min-width: 1080px){
+    #wrap{
+        width: 100%;
+        height:1000px;
+       
+    }
+   
+    .dic{
+        width:60%;
+        border: 1px solid #cccccc;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        justify-content: space-around;
+        margin-top: 6%;
+        height:450px;
+        z-index: 2;
+        background-color: #ffffff;
+        border-radius: 10px;
+    }
+    .dicimg{
+        width:60%;
+        flex-grow: 1;
+       flex-shrink: 1;
+        flex-basis: auto;
+
+    }
+    .dicimg1{
+        margin-top: 13%;
+        margin-left: 20%;
+        width:230px;
+        height:330px;
+    }
+    .dicex{
+        width:60%;
+        flex-grow: 1;
+       flex-shrink: 1;
+        flex-basis: auto;
+        margin-top: 13%;
+        font-size: x-large;
+        font-weight: 600;
+        
+        
+
+
+    }
+    .dicex p{
+        margin-bottom: 5%;
+    }
+
+    .btn{
+        text-align: center;
+        margin-top: 5%;
+    }
+    #bbtn {
+        width: 300px;
+        height: 50px;
+        background-color: black;
+        color: #ffffff;
+        font-size: larger;
+        border-radius: 10px;
+        border: none;
+		line-height:50px;
+        
+    }
+
+	a {
+	text-decoration:none;}
+     
+    }
+    
+
+    

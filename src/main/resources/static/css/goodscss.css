@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+*{	
+font-family: 'Humanbumsuk';
+padding: 0;
+	margin: 0 auto;
+box-sizing:border-box;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+width:100%;
+font-size:20px;
+}
+
+#wrap{
+width:1280px;
+margin-top:20px;
+}
+a:link, a:hover, a:visited {
+color:#F9BF15;
+text-decoration:none;
+
+}
+
+ header {
+	border: 0px ;
+    height: 180px;
+	width:1280px;
+}
+
+#login{
+float:right;
+}
+
+#logo2{
+width:100%;
+background-color:#616161;
+height:50px;
+}
+
+#logoW{
+width:1280px;
+}
+ul li:hover {
+    background-color:#FFDD08;
+    color:white;
+}
+
+footer{
+width:100%; 
+height:170px;
+background-color:#323232;
+clear:both;
+overflow:hidden;
+text-align:center;
+    margin: 0 auto;
+    color: #FFFFFF;
+
+
+}
+
+address{
+margin-top:25px;
+
+color:#aeaeae;
+
+position:center;/*absolute*/
+text-align:center;
+}
+
+li {
+    list-style-type: none;
+	
+}
+nav ul li {
+    float: left;
+    text-align: center;
+    width: 100px;
+    border: 0px ;
+    height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    line-height: 30px;
+    position: relative;
+	
+}
+ul li ul {
+    background-color: white ;
+      color: white;
+    position: absolute;
+    display: none;
+}
+nav ul li:hover ul{
+    display: block;	
+}
+nav ul li a{
+    display: block;		
+}
+ul li ul:hover {
+    display: block;
+}
+ul li ul li{
+	margin-bottom: 10px;
+	margin-top: 10px;
+}

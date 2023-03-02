@@ -1,0 +1,50 @@
+*{
+    color: black;
+}
+input{
+    height: 1.5rem;
+    
+}
+
+
+.addnumbtn{
+   
+}
+.container1{
+    background-color: #ffffff;
+    border-radius: 3%;
+    margin-top: 10%;
+    padding-right:20%;
+}
+
+.container2{
+    margin-top: 0;
+    float: right;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 3%;
+    margin-left: 50%;
+    overflow: hidden;
+    
+}
+.m{
+    margin-top: 0;
+    color: black;
+}
+.title{
+    font-weight: bold;
+}
+.cou{
+    float: left;
+}
+.total1{font-size: large;}
+
+.okbtn{
+    width: 100%;
+    background-color: #ffffff;
+    color: black;
+    border: 1px solid #cccccc;
+}
+.okbtn:hover{
+    background-color: #7c5792;
+}

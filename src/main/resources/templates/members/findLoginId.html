@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>로그인 ID 찾기 결과</title>
+  <link href="../css/loginFind.css" rel="stylesheet" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="img">
+  <a href="/">
+    <img src="/images/logo.png" style="height:100px; width:200px;">
+  </a>
+</div>
+<div id="wrapfind">
+  <div id="findid">
+    <center>
+      <div class="loginboxF">
+        <h2>로그인 ID 찾기 결과</h2>
+        <br>
+        <p th:text="'로그인 ID : ' + ${loginId}"></p>
+        <br>
+        <a href="/">로그인 화면으로</a>
+      </div>
+    </center>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,241 @@
+*{
+    padding: 0;
+    margin:0 auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+    list-style-type:none;
+}
+body html{
+    width: 100%;
+    height:100%;
+}
+
+
+@media all and (min-width: 768px){
+    #wrap{
+        
+        height: 2000px;
+    }
+
+    .navc{
+        margin-left: 73%;
+        margin-bottom: 1%;
+        font-size: small;
+        
+    }
+    .navc a{
+        text-decoration: none;
+        color: black;
+    }
+    .navc a:hover{
+        text-decoration: underline 1px solid #000000;
+        color:#000000
+    }
+    .exxo{
+        margin-top: 5%;
+    }
+    .exo{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    justify-content: space-around;
+    border: 2px solid #cccccc;
+    width:70%;
+    }
+    
+    .ftitle{
+        text-align: center;
+        flex-grow: 1;
+       flex-shrink: 1;
+        flex-basis: auto;
+        font-size: x-large;
+        font-weight: 500;
+    }
+    .fex{
+        text-align: center;
+        flex-grow: 1;
+       flex-shrink: 1;
+        flex-basis: auto;
+        font-size: medium;
+    }
+    .ex{
+        text-align: center;
+        height: 160px;
+        margin-top: 2%;
+        
+    }
+
+    .color1{
+        margin-top: 3%;
+    }
+   .color2{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    justify-content: space-between;
+    border: 2px solid #cccccc;
+    width:70%;
+    
+   }
+
+   .color3{
+    margin-top: 14px;
+    text-align: center;
+    margin-right: 9%;
+   }
+   .color3 li{
+    float: left;
+     flex-grow: 1;
+       flex-shrink: 1;
+        flex-basis: auto;
+        margin-left: 20px;
+        vertical-align: middle;
+
+   }
+    .colorbtn{
+        width: 55px;
+        height: 20px;
+        border-radius: 20px;
+        border: 3px solid #cccccc;
+        
+    }
+    .dcontent{ display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        justify-content: space-between;
+        width:70%;
+        margin-top: 3%;
+
+    }
+    .dimg{
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+        
+        
+
+    }
+    .imgr{
+        width:123px;
+        height:188px;
+        margin-left: 5%;
+        
+       
+    }
+}
+
+@media all and (min-width: 1080px){
+
+    #wrap{
+        height: 3000px;
+     
+    }
+
+    .navc{
+        margin-left: 79%;
+        margin-bottom: 1%;
+        font-size: small;
+        
+    }
+    .navc a{
+        text-decoration: none;
+        color: black;
+    }
+    .navc a:hover{
+        text-decoration: underline 1px solid #000000;
+        color:#000000
+    }
+    .exxo{
+        margin-top: 5%;
+    }
+    .exo{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    justify-content: space-around;
+    border: 2px solid #cccccc;
+    width:70%;
+    }
+    
+    .ftitle{
+        text-align: center;
+        flex-grow: 1;
+       flex-shrink: 1;
+        flex-basis: auto;
+        font-size: x-large;
+        font-weight: 500;
+    }
+    .fex{
+        text-align: center;
+        flex-grow: 1;
+       flex-shrink: 1;
+        flex-basis: auto;
+        font-size: medium;
+    }
+    .ex{
+        text-align: center;
+        height: 160px;
+        margin-top: 2%;
+        
+    }
+
+    .color1{
+        margin-top: 3%;
+    }
+   .color2{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    justify-content: space-between;
+    border: 2px solid #cccccc;
+    width:70%;
+    
+   }
+
+   .color3{
+    margin-top: 14px;
+    text-align: center;
+    margin-right: 9%;
+   }
+   .color3 li{
+    float: left;
+     flex-grow: 1;
+       flex-shrink: 1;
+        flex-basis: auto;
+        margin-left: 42px;
+        vertical-align: middle;
+
+   }
+    .colorbtn{
+        width: 110px;
+        height: 40px;
+        border-radius: 20px;
+        border: 3px solid #252424;
+        
+    }
+    .dcontent{ display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        justify-content: space-between;
+        width:70%;
+        margin-top: 3%;
+
+    }
+    .dimg{
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+        
+        
+
+    }
+    .imgr{
+        width:230px;
+        height:315px;
+        margin-left: 6.5%;
+        
+       
+    }
+    
+}
+    

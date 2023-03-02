@@ -1,0 +1,581 @@
+
+
+
+@media all and (min-width: 768px){
+    *{margin: 0 auto;
+        padding: 0;}
+.which{
+    margin-left: 30%;
+}
+.logo{
+    margin-left: 7%;
+}
+.ham{
+    margin-right: 7%;
+    text-align: center;
+}
+.nav1{
+    z-index: 2;
+}
+/* 서브메뉴 */
+.sub{width: 100%;font-size: smaller;
+    z-index:2;
+   }
+ 
+.sub a:hover{
+    color: #503c55;
+}
+.firstli{ box-sizing: border-box;
+    line-height: 30px;
+    position: relative;
+
+}
+.menu li .subul {
+    display: none;
+    background-color: white ;
+      color: white;
+    position: absolute;
+    
+}
+nav .menu li:hover .subul{
+    display: block;	
+}
+nav .menu li a{
+    display: block;		
+}
+.menu .about .subul:hover {
+    display: block;
+}
+.menu .about .subul li{
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.subul{
+    display: none;
+    text-align: center;
+    line-height: 40px;
+    padding: 0%;
+    margin-left: 75px;
+    z-index: 4;
+}
+
+
+/* 서브메뉴 끝 */
+#top{
+    
+    list-style: none;
+    padding-left: 70%;
+    
+}
+#topli{
+    float: left;
+    font-size: large;
+    margin: 0 7px;
+    font-family: 'Nanum Pen Script', cursive;
+    color: #000;
+    
+    
+}
+#topli:hover{
+    text-decoration: 1.5px underline #cccccc;
+}
+.navline .navli{
+    font-size: x-large;
+    font-family: 'Nanum Pen Script', cursive;
+    margin: 0px -30px;
+    width:200px;
+    text-align: center;
+	background:white;
+}
+.navline{
+    position: absolute;
+    margin-left: 75px;
+    
+}
+.navline .navli::after {position: relative; content:""; display: block; border-bottom: 2px solid #000; transition: all 250ms ease-out; left: 50%; width: 0;z-index: 6;}
+.navline .navli:hover::after {transition: all 250ms ease-out; left: 0%; width: 100%;}
+
+a{  color: #000;
+    text-decoration: none;
+}
+a:hover{
+    color: #000;
+    
+}
+.nav1{clear: both;
+    }
+
+
+
+    .footer{
+        background-color: #000000;
+        width: 100%;
+        height: 300px;
+    }
+    .fimg{
+        width:180px;
+        height:95px;
+        margin-top: 27px;
+    }
+    .fg{
+        width: 500px;
+        margin-top: 23px;
+    }
+    .ft{
+        font-size: xx-small;
+        color: #ffffff;
+    }
+
+/* 메인화면css */
+.slidek{
+    height: 200px;
+}
+.section2{
+    width:100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    justify-content: space-between;
+    text-align: center;
+    margin-top:7em ;
+}
+.article{
+    width: 33%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    margin-bottom: 2em;
+}
+.circletitle{
+    font-weight: bold;
+    margin-top: 2vh;
+}
+.circlecontent{
+    font-size: 13px;
+    font-weight: lighter;
+    margin-top: 2vh;
+}
+#viewbtn{
+    font-size: small;
+    border: none;
+    padding:1% 2%;
+    border-radius: 10px;
+    margin-top: 2vh;
+}
+
+#allhr{
+    margin-top: 7em;
+}
+/* 2월 23일 */
+.thr{
+margin-top: 2em;
+margin-bottom: 2em;
+}
+
+.box{
+text-align: center;
+}
+
+.content1{
+width:100%;
+height:250px;
+
+display: flex;
+flex-flow: row nowrap;
+justify-content: center;
+justify-content: space-around;
+
+}
+.con{
+flex-grow: 1;
+flex-shrink: 1;
+flex-basis: auto;
+width:300px;
+
+
+
+
+
+
+}
+.img1{
+width: 250px;
+height: 250px;
+margin-left: 132px;
+
+/* 여기서부터 */
+}
+.img2{
+width: 250px;
+height: 250px;
+margin-left: 2em;
+
+}
+.img3{
+width: 250px;
+height: 250px;
+
+margin-left: 2em;
+
+}
+.con1{flex-grow: 1;
+flex-shrink: 1;
+flex-basis: auto;
+text-align: left;
+width: 400px;
+margin-top: 4em;
+margin-left: 2em;
+white-space: normal;
+   
+
+}
+.con2{
+flex-grow: 1;
+flex-shrink: 1;
+flex-basis: auto;
+text-align: left;
+padding-left: 3em;
+margin-right: 2em;
+margin-top: 2em;
+width:400px;
+
+
+}
+.d1{
+flex-grow: 1;
+flex-shrink: 1;
+flex-basis: auto;
+text-align: left;
+width: 200px;
+margin-top: 2em;
+margin-left: 2em;
+white-space: normal;
+
+}
+.d3{
+flex-grow: 1;
+flex-shrink: 1;
+flex-basis: auto;
+text-align: left;
+width: 400px;
+margin-top: 2em;
+margin-left: 2em;
+white-space: normal;
+
+}
+
+#cs{
+margin-top: 2em;
+line-height: 30px;
+font-size: 13px;
+}
+P{
+font-size: 18px;
+font-weight: bold;
+}
+a{
+text-decoration: none !important;
+color: #000000 !important;
+}
+
+.d1 a p:hover{
+text-decoration:underline 1px solid #000000;
+
+}
+.con2 a p:hover{
+text-decoration:underline 1px solid #000000;
+}
+.d3 a p:hover{text-decoration:underline 1px solid #000000;}
+
+
+
+}
+
+
+
+
+
+
+
+
+@media all and (min-width: 1080px){ 
+
+    *{margin: 0 auto;
+        padding: 0;}
+        
+.which{
+    margin-left: 30%;
+    
+}
+.logo{
+    margin-left: 7%;
+}
+.ham{
+    margin-right: 7%;
+    text-align: center;
+}
+
+/* 서브메뉴 */
+.sub{width: 100%;font-size: smaller;
+   }
+ 
+.sub a:hover{
+    color: #503c55;
+}
+.firstli{ box-sizing: border-box;
+    line-height: 30px;
+    position: relative;
+
+}
+.menu li .subul {
+    display: none;
+    background-color: white ;
+      color: white;
+    position: absolute;
+    
+}
+nav .menu li:hover .subul{
+    display: block;	
+}
+nav .menu li a{
+    display: block;		
+}
+.menu .about .subul:hover {
+    display: block;
+}
+.menu .about .subul li{
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.subul{
+    display: none;
+    text-align: center;
+    line-height: 40px;
+    padding: 0%;
+    margin-left: 75px;
+    z-index: 3;
+}
+
+
+/* 서브메뉴 끝 */
+#top{
+    
+    list-style: none;
+    padding-left: 70%;
+    
+}
+#topli{
+    float: left;
+    font-size: large;
+    margin: 0 7px;
+    font-family: 'Nanum Pen Script', cursive;
+    color: #000;
+    
+    
+}
+#topli:hover{
+    text-decoration: 1.5px underline #cccccc;
+}
+.navline .navli{
+    font-size: x-large;
+    font-family: 'Nanum Pen Script', cursive;
+    margin: 0px -30px;
+    width:200px;
+    text-align: center;
+	background:white;
+}
+.navline{
+    position: absolute;
+    margin-left: 75px;
+    
+}
+.navline .navli::after {position: relative; content:""; display: block; border-bottom: 2px solid #000; transition: all 250ms ease-out; left: 50%; width: 0; z-index: 4;}
+.navline .navli:hover::after {transition: all 250ms ease-out; left: 0%; width: 100%;}
+
+a{  color: #000;
+    text-decoration: none;
+}
+a:hover{
+    color: #000;
+    
+}
+.nav1{clear: both;
+    }
+
+
+
+/* fo */
+.footer{
+    width: 100%;
+    height: 270px;
+}
+
+.flo{
+    float: left;
+    margin-left: 100px;
+}
+.fimg{
+    
+    width:180px;
+    height:95px;
+    margin-top: 80px;
+}
+.fg{
+    width:740px;
+    float:right ;
+    margin-right: 120px;
+    margin-top: 67px;
+    text-align: left;
+}
+
+.ft{
+    font-size: small;
+    margin-left: 50px;
+    clear: both;
+    display: flex;
+   justify-content: center;
+    
+}
+
+/* 메인메뉴css */
+
+.slidek{
+    height: 200px;
+}
+.section2{
+    width:100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    justify-content: space-between;
+    text-align: center;
+    margin-top:7em ;
+}
+.article{
+    width: 33%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+.circletitle{
+    font-weight: bold;
+    margin-top: 2vh;
+}
+.circlecontent{
+    font-size: 13px;
+    font-weight: lighter;
+    margin-top: 2vh;
+}
+#viewbtn{
+    font-size: small;
+    border: none;
+    padding:1% 2%;
+    border-radius: 10px;
+    margin-top: 2vh;
+}
+
+#allhr{
+    margin-top: 7em;
+}
+.thr{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.box{
+    text-align: center;
+}
+
+.content1{
+    width:100%;
+    height:350px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    justify-content: space-around;
+   
+}
+.con{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    
+
+    
+
+}
+
+.img1{
+    width: 350px;
+    height: 350px;
+    margin-right: -14em;
+}
+.img2{
+    width: 350px;
+    height: 350px;
+    margin-left: 7em;
+}
+.img3{
+    width: 350px;
+    height: 350px;
+    margin-left: 8.5em;
+
+}
+.con1{
+    width: 600px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    text-align: left;
+    padding-left: 7em;
+    margin-top: 4em;
+  
+       
+
+}
+.con2{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    text-align: left;
+    padding-left: 6em;
+    margin-top: 2em;
+    
+
+}
+
+#cs{
+    margin-top: 2em;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+P{
+    font-size: 26px;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    text-decoration: 1px solid #000000 !important;
+}
+
+body {
+    height:fit-content;
+}
+
+.d1 a p:hover{
+text-decoration:underline 1px solid #000000;
+
+}
+.con2 a p:hover{
+text-decoration:underline 1px solid #000000;
+}
+.d3 a p:hover{text-decoration:underline 1px solid #000000;}
+
+
+
+}

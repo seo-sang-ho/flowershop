@@ -1,0 +1,46 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title></title>
+    <link href="css/login.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700&display=swap" rel="stylesheet">
+</head>
+<script language="javascript" src="js_package.js">
+</script>
+<body onload="idFocus()">
+<div id="img">
+    <a href="index.html"><img src="images/logo.png" style="height:100px; width:200px;"></a>
+</div>
+
+<div class="loginbox">
+    <h2>로그인</h2>
+    <form name="login" method="post" th:action="@{/login}" th:object="${loginForm}">
+
+        <div th:if="${#fields.hasGlobalErrors()}">
+            <p class="field-error" th:each="err : ${#fields.globalErrors()}"
+               th:text="${err}">전체 오류 메시지</p> </div>
+
+        <br>
+        <input type="text" id="id" th:field="*{loginId}" class="form-control"
+               th:errorclass="field-error" name="id" placeholder="아이디를 입력해 주세요">
+        <div class="field-error" th:errors="*{loginId}" />
+        <br>
+        <input type="password" id="pwd" th:field="*{password}"
+               class="form-control" onkeydown="onEnterSubmit()" name="pswd"
+               th:errorclass="field-error" placeholder="비밀번호를 입력해 주세요">
+        <div class="field-error" th:errors="*{password}" />
+
+
+        <p style="float:right; "><a href="/members/findId">아이디 찾기 /</a>&nbsp;<a href="/members/findPassword">비밀번호 찾기</a>
+            <a href="/members/new">| 회원가입</a><br></p><br><br><br>
+
+        <!--데이터를 서버로 전송-->
+        <button type="submit">로그인</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+  <title></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link href="../css/indexflower.css" rel="stylesheet" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+  <style>
+*{margin:0 auto;
+	padding:0;
+	box-sizing:border-box;}
+</style>
+</head>
+<body body style="overflow-x:hidden; overflow-y:auto;">
+<div style="height:auto; min-height: 100%;">
+  <div id="divtop">
+    <ul id="top">
+      <li id="topli"><a href="/login">로그인</a></li>
+      <li id="topli"><a href="/members/new">회원가입</a></li>
+      <li id="topli"><a href="cart.html" target="main">장바구니</a></li>
+      <li id="topli"><a href="my.html" target="main">마이페이지</a></li>
+
+    </ul>
+  </div>
+  <nav class="navbar navbar-expand-lg  nav1">
+
+    <div class="container-fluid">
+      <a class="navbar-brand logo" href="index.html" ><img src="images/logo2.png" style="width:140px; height:75px; margin-top: -30px;" alt="꽃:다소니로고" ></a>
+      <button class="navbar-toggler ham" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse which" id="navbarNav">
+        <ul class="navbar-nav navline menu">
+          <li class="nav-item navli firstli">
+            <a class="nav-link active" aria-current="page" href="#" target="main">꽃추천</a>
+          </li>
+          <li class="nav-item navli">
+            <a class="nav-link active" href="#" target="main">꽃시장</a>
+          </li>
+          <li class="nav-item navli">
+            <a class="nav-link active" href="#" target="main">소품</a>
+          </li>
+          <li class="nav-item navli">
+            <a class="nav-link active" href="/flowerDictionary" target="main">꽃사전</a>
+          </li>
+          <li class="nav-item navli about">
+            <a class="nav-link active"  target="main">ABOUT</a>
+            <ul class="navbar-nav navline subul">
+              <li class="sub" ><a href="notice.html" target="main">공지사항</a></li>
+              <li class="sub"><a href="brand.html" target="main">브랜드소개</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- main -->
+  <div id="wrap">
+    <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="true" >
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner" >
+        <div class="carousel-item active">
+          <a href="#"><img src="images//key1.png" class="d-block w-100" alt="..." style="width:100%; height:50%;" ></a>
+        </div>
+        <div class="carousel-item">
+          <a href="#"><img src="images/KEY2.png" class="d-block w-100" alt="..." ></a>
+        </div>
+        <div class="carousel-item">
+          <a href="#"><img src="images/key5.png" class="d-block w-100" alt="..."></a>
+        </div>
+
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="section">
+      <div class="section2">
+        <div class="article">
+          <div class="circle1"><img src="images/circle1.png" style="width: 150px; height: 150px; border-radius: 50%;"></div>
+          <div class="circletitle">기념일엔 다소니 꽃과 함께</div>
+          <div class="circlecontent">다소니 공식 플로리스트가 제작한 꽃다발로 마음을 전하세요.
+          </div>
+          <div class="viewdetails"><a href="#"><input type="button" value="자세히 보기" id="viewbtn"></a></div>
+        </div>
+        <div class="article">
+          <div class="circle1"><img src="images/circle2.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></div>
+          <div class="circletitle">선물같은 일상</div>
+          <div class="circlecontent">꽃바구니로 특별한 하루를 선물하세요.</div>
+          <div class="viewdetails"><a href="#"><input type="button" value="자세히 보기" id="viewbtn"></a></div>
+        </div>
+        <div class="article">
+          <div class="circle1"><img src="images/circle3-1.png" style="width: 150px; height: 150px; border-radius: 50%;"></div>
+          <div class="circletitle">화병으로 인테리어 완성</div>
+          <div class="circlecontent">다양한 화병으로 인테리어에 화사함 한스푼을 더하세요!</div>
+          <div class="viewdetails"><a href="#"><input type="button" value="자세히 보기" id="viewbtn"></a></div>
+        </div>
+        <!-- section2끝 -->
+      </div>
+      <!-- section끝 -->
+    </div>
+    <div id="allhr"><hr></div>
+
+    <div class="box1">
+      <div class="content1">
+        <div class="con1 d1"><a href="#"><p>3월이 다가오고 봄이 성큼 다가왔어요!</p><div id="cs">꽃 : 다소니에서 3월 제철꽃을 준비했습니다.<br> 이번주, 친구, 연인, 가족에게
+          봄 내음 물씬나는 화사한 꽃을 선물하는 건 어떨까요?</div></a></div>
+        <div class="con"><a href="#"><img src="images/s1.png" class="img1"></a></div>
+      </div>
+    </div>
+    <div id="thr"><hr></div>
+    <div class="box1">
+      <div class="content1">
+        <div class="con"><img src="images/s2.png" class="img2"></div>
+        <div class="con2"><a href="#"><p>내가 찾는 꽃은 어디에?</p><div id="cs">꽃추천 메뉴를 통해 내가 원하던 꽃을 찾아보세요!<br> 다양한 꽃의 종류때문에
+          무엇을 살지 망설이셨던 분들 여기 주목!<br> 꽃: 다소니에서는 꽃추천 메뉴를 통해 현재 나의 상황에 맞게,
+          취향을 고려한 꽃을 찾을 수 있습니다.</a></div>
+      </div>
+
+    </div>
+  </div>
+  <div id="thr"><hr></div>
+  <div class="box1">
+    <div class="content1">
+      <div class="con1 d3"><a href="#"><p>다소니만의 작은 꽃사전</p><div id="cs">평소 꽃 이름에 대해 잘 모르는 사람이더라도 이 꽃사전만 있으면 끝!<br> 다양한 꽃을 색깔별로 분류하여 원하는 색의 꽃을 찾아볼 수 있습니다.<br>
+        일석이조! 꽃의 이름, 개화시기 등을 알 수 있어 꽃에 대한 지식을 UP!</div></a></div>
+      <div class="con"><img src="images/s3.png" class="img3"></div>
+    </div>
+  </div>
+  <div id="thr"><hr></div>
+
+
+
+  <!--wrap끝  -->
+</div>
+
+
+<!-- main -->
+
+<div class="jumbotron text-center mt-5 mb-0 footer foot">
+
+  <div class="flo" ><img src="images/whitelogo.png" class="fimg"></div>
+
+  <div class="fg">
+		<span class="ft" >31020 충청남도 천안시 서북구 성환읍 대학로 91번지 Ι 개인정보 보호책임자 : dasoni@nsu.ac.kr
+ Ι FAX 041-582-2117 Ι Email : dasoni@nsu.ac.kr<br>
+
+		<br>고객센터 TEL 041-580-2000<br>
+		AM 9:30 - PM 18:00 점심시간 13:00 - 14:00 (주말 & 공휴일 휴무)<br><br> © 꽃 : 다소니 All right reserved</span>
+
+  </div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+</body>
+</html>

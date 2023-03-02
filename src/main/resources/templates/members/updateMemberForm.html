@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>내 정보 수정</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/member.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+<form th:action="@{/members/edit}" method="post" th:object="${member}">
+    <br><hr>
+    <div id="order" style="width:280px; float:left;"><h4>마이페이지</h4><br><br>
+        <ul>
+            <li><a href="mypage.jsp"><p class="text">주문처리현황 ></p></a></li><br>
+
+            <li><a href="cart.jsp"><p class="text">장바구니 ></p></a></li><br>
+            <li><a href="selectOrder.jsp?id=< %=key%>"><p class="text">주문내역조회 ></p></a></li><br>
+            <li><a href="selectCustomer.jsp?id=< %=key%>"><p class="text">회원정보 ></p></a></li><br>
+        </ul>	</div>
+
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb" style="float: right; padding-right: 5%;">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/members/myPage">마이페이지</a></li>
+            <li class="breadcrumb-item active" aria-current="page">주문처리현황</li>
+        </ol>
+    </nav>
+    <center>
+        <div id="wrap"  STYLE="BACKGROUND-COLOR:WHITE; height:750px;">
+
+            <br>
+
+            <div class="wrapper" >
+
+                <div class="title"><h1 style="font-size: 21px;">회원정보</h1></div>		   <br><br>
+                <input type="hidden" name="memberId" th:field="*{memberId}"/>
+                <div style="width:100%; float:left; padding-left:70px;">
+                    <div style=" float:left;padding-right:30px;">
+                        아이디 	</div>
+                    <div style="width: 50%;float:right; margin-right:30px; height:30px; background-color:white;border: 1px solid black; border-radius: 1em;">
+                        <input type="text" th:field="*{loginId}" style="border: none;" ></div>
+
+                </div>
+
+                <br> <br><br>
+
+                <div style="width:100%; float:left; padding-left:70px;">
+                    <div style=" float:left;padding-right:30px;">
+                        비밀번호 </div>
+                    <div style="width: 50%;float:right; margin-right:30px; height:30px; background-color:white;border: 1px solid black; border-radius: 1em;">
+                        <input type="text" th:field="*{password}" style="border: none;"></div>
+
+                </div>
+                <br> <br><br>
+
+
+                <div style="width:100%; float:left; padding-left:70px;">
+                    <div style=" float:left;padding-right:30px;">
+                        이메일 </div>
+                    <div style="width: 50%;float:right; margin-right:30px; height:30px; background-color:white;border: 1px solid black; border-radius: 1em;">
+                        <input type="text" th:field="*{email}" style="border: none;"></div>
+
+                </div>
+                <br> <br><br>
+
+
+                <div style="width:100%; float:left; padding-left:70px;">
+                    <div style=" float:left;padding-right:30px;">
+                        이름 </div>
+                    <div style="width: 50%;float:right; margin-right:30px; height:30px; background-color:white;border: 1px solid black; border-radius: 1em;">
+                        <input type="text" th:field="*{name}" style="border: none;" >  </div>
+
+                </div>
+                <br> <br><br>
+
+                <div style="width:100%; float:left; padding-left:70px;">
+                    <div style=" float:left;padding-right:30px;">
+                        핸드폰 번호</div>
+                    <div style="width: 50%;float:right; margin-right:30px; height:30px; background-color:white;border: 1px solid black; border-radius: 1em;">
+                        <input type="text" th:field="*{phone}" style="border: none;" ></div>
+
+                </div>
+
+                <div style="width:100%; float:left; padding-left:70px;">
+                    <div style=" float:left;padding-right:30px;">
+
+                        주소 </div>
+                    <div style="width: 50%;float:right; margin-right:30px; height:30px; background-color:white;border: 1px solid black; border-radius: 1em;">
+                        <input type="text" th:field="*{city}" style="border: none;" ></div>
+
+                </div>
+                <br> <br><br>
+
+
+                <div style="width:100%; float:left; padding-left:70px;">
+                    <div style=" float:left;padding-right:30px;">
+                        상세주소</div>
+                    <div style="width: 50%;float:right; margin-right:30px; height:30px; background-color:white;border: 1px solid black; border-radius: 1em;">
+                        <input type="text" th:field="*{street}" style="border: none;" ></div>
+
+                </div>
+                <br> <br><br>
+
+                <div style="width:100%; float:left; padding-left:70px;">
+                    <div style=" float:left;padding-right:30px;">
+                        우편번호</div>
+                    <div style="width: 50%;float:right; margin-right:30px; height:30px; background-color:white;border: 1px solid black; border-radius: 1em;">
+                        <input type="text" th:field="*{zipcode}" style="border: none;" ></div>
+
+                </div>
+
+
+                <br> <br><br>
+
+
+                <br><br> <br><br>
+
+                <div class="signUp">
+                    <button id="signUpButton"  onclick="signUpCheck()"><a href="members/{memberId}/edit" style="color:white;">회원정보수정</a></button>
+
+                </div>
+
+
+            </div>
+
+        </div></center>
+</form>
+</body>
+</html>

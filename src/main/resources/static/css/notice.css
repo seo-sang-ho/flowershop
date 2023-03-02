@@ -1,0 +1,28 @@
+li a{
+        text-decoration: none;
+        color: black;
+      }
+      *{
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+    .noti{
+        clear: both; text-align: center; font-size: xx-large; font-weight: 500;
+    }
+
+    td a{
+        text-decoration: none;
+        color: black;
+    }
+
+li a:hover{
+    color: black;
+    text-decoration:underline 1px solid #000000;
+}
+td a:hover{
+    color: black;
+    text-decoration:underline 1px solid #000000;
+}
+input:focus {outline:none;}
+
+
+

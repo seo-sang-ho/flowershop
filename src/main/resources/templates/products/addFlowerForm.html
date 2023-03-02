@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>회원가입</title>
+    <script src="/js/js_package.js"></script>
+    <link th:href="@{../css/join.css}" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700&display=swap}" rel="stylesheet">
+</head>
+<!--<div th:replace="fragment/header :: header"/>-->
+<body onload="idFocus()">
+<div th:if="${alertMsg}" th:utext="'<script>alert(\'' + ${alertMsg} + '\');</script>'"></div>
+
+<div id="wrap" th:style="'background-color: white;'">
+    <div id="img">
+        <a href="/"><img src="/images/logo.png" style="height:50px; width:100px; "></a>
+    </div>
+    <form name="newMem" method="post" th:object="${flower}" action="/products/createFlower">
+        <div class="wrapper">
+            <div class="title">
+                <h1 style="font-size: 21px;">꽃 상품 추가</h1>
+            </div>
+            <font size="2" id="fillsu" style="float:right;">* 필수 입력 사항</font><br><br>
+            <div class="id">
+                <label th:for="name">상품명 *</label>
+                <a href="javascript:checkID()" style="float:right;">
+                </a>
+                <input placeholder="상품명을 입력해 주세요." id="name" type="text" name="name" th:field="*{name}">
+                <div id="idError" class="error"></div>
+                <div class="password">
+                    <label th:for="flowerKind">상품 종류 *</label>
+                    <input id="flowerKind" type="text" name="flowerKind" placeholder="상품 종류를 입력해 주세요." th:field="*{flowerKind}">
+                    <div id="passwordError" class="error"></div>
+                </div>
+            </div>
+
+            <div class="email">
+                <label th:for="price">가격 *</label>
+                <input id="price" type="text" placeholder="가격을 입력해 주세요." name="price" th:field="*{price}">
+                <div id="emailError" class="error"></div>
+            </div>
+
+            <div class="phone">
+                <label th:for="stockQuantity">재고 *</label>
+                <input id="stockQuantity" style="width: 100%;"  type="text" placeholder="재고를 입력해 주세요." name="stockQuantity" th:field="*{stockQuantity}">
+                <div id="phoneError" class="error"></div>
+            </div>
+            <div class="addr">
+                <label th:for="description">부가 설명 *</label>
+                <input type="text" name="city" id="city" style="width: 100%;" th:field="*{city}">
+                <br>
+            </div>
+            <br>
+        </div>
+        <br>
+        <div class="signUp">
+            <button id="signUpButton" onclick="signUpCheck()">가입하기</button>
+        </div>
+    </form>
+</div>
+<!--<div th:replace="fragment/footer :: footer"/>-->
+</body>
+</html>

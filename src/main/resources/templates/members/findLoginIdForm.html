@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>로그인 ID 찾기</title>
+    <link href="/css/loginFind.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div id="img">
+    <a href="/"><img src="/images/logo.png" style="height:100px; width:200px;"></a>
+</div>
+<div id="wrapfind">
+    <div id="findid">
+        <center>
+            <div class="loginboxF">
+                <h2>로그인 ID 찾기</h2>
+                <form name="findid" method="post" action="/members/findId">
+
+                    <br><br>
+                    <input type="text" id="fname" placeholder="이름을 입력해 주세요." name="name" th:value="${param.name}"><br>
+                    <input type="text" id="fname" placeholder="등록된 전화번호를 입력해 주세요." name="phone" th:value="${param.phone}"><br>
+                    <br>
+                    <button type="submit">로그인 ID 찾기</button>
+                </form>
+                <script th:inline="javascript">
+                var error = [[${error}]];
+                if (error) {
+                    alert(error);
+                }
+                </script>
+            </div>
+        </center>
+    </div>
+</div>
+</body>
+</html>
