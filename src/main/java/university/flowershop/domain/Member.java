@@ -51,4 +51,5 @@ public class Member {
         return this.address.getZipcode();
     }
 
+
 }

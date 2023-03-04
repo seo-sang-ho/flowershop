@@ -7,7 +7,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import university.flowershop.domain.Address;
 import university.flowershop.domain.Member;
-import university.flowershop.dto.MemberDto;
 import university.flowershop.exception.MemberNotFoundException;
 import university.flowershop.service.MemberService;
 import university.flowershop.session.SessionConst;
@@ -111,25 +110,28 @@ public class MemberController {
         return "members/myPage";
     }
 
-    @GetMapping("/members/edit")
-    public String updateMemberForm(Model model, HttpSession session) {
+    @GetMapping("/members/myPage/edit")
+    public String editForm(Model model, HttpSession session) {
         Member member = (Member) session.getAttribute(SessionConst.LOGIN_MEMBER);
-        Long memberId = member.getId();
-        MemberDto memberDto = new MemberDto(memberId, member.getName(), member.getLoginId(), member.getPassword(),
-                member.getPhone(), member.getEmail(), member.getCity(), member.getStreet(), member.getZipcode());
-        model.addAttribute("member", memberDto);
-        return "members/updateMemberForm";
+        Member foundMember = memberService.getMemberByName(member.getId());
+        model.addAttribute("member", foundMember);
+        return "members/editForm";
     }
 
-    @PostMapping("/members/edit")
-    public String updateMember(@ModelAttribute("member") MemberDto memberDto, HttpSession session) {
-        Member member = (Member) session.getAttribute(SessionConst.LOGIN_MEMBER);
-        Long memberDtoId = member.getId();
-        memberService.updateMember(memberDtoId, memberDto.getName(), memberDto.getLoginId(),
-                memberDto.getPassword(), memberDto.getPhone(), memberDto.getEmail(),
-                memberDto.getCity(), memberDto.getStreet(), memberDto.getZipcode());
+    @PostMapping("/members/myPage/edit")
+    public String updateMember(@ModelAttribute("memberForm") MemberForm memberForm, HttpSession session) {
+        // HttpSession에서 로그인한 멤버 정보를 가져옵니다.
+        Member loginMember = (Member) session.getAttribute(SessionConst.LOGIN_MEMBER);
+
+        // 수정할 회원 정보를 MemberForm에서 가져와서 Member 객체로 변환합니다.
+
+
+        // MemberService를 사용하여 회원 정보를 업데이트합니다.
+
+        // 마이페이지로 리다이렉트합니다.
         return "redirect:/members/myPage";
     }
+
 
 
 }

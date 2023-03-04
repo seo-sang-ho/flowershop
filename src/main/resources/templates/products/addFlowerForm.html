@@ -18,7 +18,7 @@
     <div id="img">
         <a href="/"><img src="/images/logo.png" style="height:50px; width:100px; "></a>
     </div>
-    <form name="newMem" method="post" th:object="${flower}" action="/products/createFlower">
+    <form name="newMem" method="post" th:object="${flowerForm}" action="/products/createFlower">
         <div class="wrapper">
             <div class="title">
                 <h1 style="font-size: 21px;">꽃 상품 추가</h1>
@@ -50,14 +50,14 @@
             </div>
             <div class="addr">
                 <label th:for="description">부가 설명 *</label>
-                <input type="text" name="city" id="city" style="width: 100%;" th:field="*{city}">
+                <input type="text" name="description" id="description" style="width: 100%;" th:field="*{description}">
                 <br>
             </div>
             <br>
         </div>
         <br>
         <div class="signUp">
-            <button id="signUpButton" onclick="signUpCheck()">가입하기</button>
+            <button id="signUpButton" onclick="signUpCheck()">상품 등록</button>
         </div>
     </form>
 </div>
