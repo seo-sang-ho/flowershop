@@ -37,6 +37,6 @@ public class FlowerController {
         flower.setDescription(form.getDescription());
 
         flowerService.saveFlower(flower);
-        return "loginIndex";
+        return "redirect:/loginIndex";
     }
 }

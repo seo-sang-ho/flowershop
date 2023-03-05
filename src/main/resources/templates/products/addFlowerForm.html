@@ -18,7 +18,7 @@
     <div id="img">
         <a href="/"><img src="/images/logo.png" style="height:50px; width:100px; "></a>
     </div>
-    <form name="newMem" method="post" th:object="${flowerForm}" action="/products/createFlower">
+    <form name="newMem" method="post" th:object="${flowerForm}" action="/flower/new">
         <div class="wrapper">
             <div class="title">
                 <h1 style="font-size: 21px;">꽃 상품 추가</h1>
@@ -63,4 +63,5 @@
 </div>
 <!--<div th:replace="fragment/footer :: footer"/>-->
 </body>
+
 </html>

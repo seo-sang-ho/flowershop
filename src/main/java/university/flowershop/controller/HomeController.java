@@ -49,4 +49,9 @@ public class HomeController {
     public String flowerDictionary() {
         return "flowerDictionary";
     }
+
+    @GetMapping("/brand")
+    public String brand() {
+        return "brand";
+    }
 }
