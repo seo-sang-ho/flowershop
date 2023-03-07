@@ -24,5 +24,16 @@ td a:hover{
 }
 input:focus {outline:none;}
 
+.contentwrap{
+    margin-top: 20px;
+    text-align: center;
+}
+#ucontent{
+    
+    
+height: 500px;
+width: 500px;
+margin-top: 20px;
 
+}
 

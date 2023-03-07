@@ -12,18 +12,19 @@ import static javax.persistence.FetchType.*;
 
 @Entity
 @Getter @Setter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 public class Notice {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id; // 공지사항 번호
 
-    private String title;
+    private String title;  // 제목
 
-    private String content;
+    private String content; // 내용
 
-    private LocalDateTime createdAt;
+    private LocalDateTime createdAt; // 작성된 시간
+
 
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "admin_id")

@@ -1,0 +1,393 @@
+*{
+    padding: 0;
+    margin:0 auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+    list-style-type:none;
+}
+body html{
+    width: 100%;
+    height:100%;
+    
+}
+
+@media all and (min-width:768px){
+    .noticewrap{
+        width:650px;
+        height: 890px;
+        background-color: white;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #title{
+        width:500px;
+    }
+    #utitle{
+            width:500px;
+        }
+    .noti {
+        text-align: center;
+        font-size: x-large;
+    font-weight: 500;
+   
+    padding-top: 30px;
+    }
+    .notitle{
+        text-align: center;
+        font-size: x-large;
+    font-weight: 500;
+    padding-top: 70px;
+    }
+
+.liho a{
+    text-decoration: none;
+    color: black;
+}
+.liho a:hover{
+    text-decoration: underline 1px solid #000000;
+    color: #000000;
+    
+}
+td a{
+    text-decoration: none;
+    color: #000000;
+}
+td a:hover{
+    text-decoration: underline 1px solid #000000;
+    color: #000000;
+
+}
+
+.title{
+    text-align: center;
+    font-size: large;
+
+}
+.pwdup{
+    margin-left: 73px;
+    margin-top: 10px;
+}
+.pwdup input{
+    width: 120px;
+
+}
+/*  */
+.date{
+    float: left;
+
+}
+.who{
+    clear: both;
+    float: right;
+}
+/*  */
+.contentwrap{
+    clear: both;
+}
+table{
+    width: 500px;
+}
+.writer{
+    text-align: right;
+}
+
+.tbl{
+border-top: 1px solid #cccccc;
+border-bottom: 1px solid #cccccc;
+margin-top: 20px;
+width: 500px;
+}
+
+.btn3{
+margin-top: 40px;
+
+
+}
+
+.pwddel{
+    margin-left: -313px;
+margin-top: 10px;
+
+}
+.pwddel input{
+    width: 120px;
+
+}
+
+.btn3 input{
+margin-left: 50px;
+background-color: black;
+color: white;
+border-radius: 7px;
+padding:8px 20px;
+text-align: center;
+}
+.btnt{
+    margin-right: 70px;
+
+}
+.btn4{
+text-align: center;
+margin-top: 40px;
+}
+.btn4 input{
+
+background-color: black;
+color: white;
+border-radius: 7px;
+padding:8px 20px;
+text-align: center;
+
+}
+
+
+.noticeimg{
+width:50px;
+height: 50px;
+
+}
+.im{
+text-align:center;
+}
+.pwd{
+margin-left: 73px;
+margin-top: 10px;
+}
+.pwd input{
+width: 120px;
+}
+.wbtn{
+
+}
+.contentwrap{
+    margin-top: 20px;
+    text-align: center;
+}
+#ucontent{
+    
+    
+height: 500px;
+width: 500px;
+margin-top: 20px;
+
+}
+#content{
+
+
+height: 500px;
+width: 500px;
+margin-top: 20px;
+
+}
+.wbtn p{
+margin-left:553px;
+color: white;
+}
+.wbtn p a{
+text-decoration: none;
+color: white;
+}
+.wbtn p a input{
+padding: 10px;
+width:100px;
+background-color: black;
+border: none;
+color: white;
+border-radius: 5px;
+}
+
+.btnback{
+    margin-left: 13px;
+}
+.datew td{
+    font-size: small;
+}
+   
+
+}
+
+@media all and (min-width:1080px){
+    .noticewrap{
+        width:650px;
+        height: 890px;
+        background-color: white;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .noti {
+        text-align: center;
+        font-size: x-large;
+    font-weight: 500;
+   
+    padding-top: 30px;
+    }
+    .notitle{
+        text-align: center;
+        font-size: x-large;
+    font-weight: 500;
+    padding-top: 70px;
+    }
+
+.liho a{
+    text-decoration: none;
+    color: black;
+}
+.liho a:hover{
+    text-decoration: underline 1px solid #000000;
+    color: #000000;
+    
+}
+td a{
+    text-decoration: none;
+    color: #000000;
+}
+td a:hover{
+    text-decoration: underline 1px solid #000000;
+    color: #000000;
+
+}
+
+.title{
+    text-align: center;
+    font-size: large;
+
+}
+/*  */
+.date{
+    float: left;
+
+}
+.who{
+    clear: both;
+    float: right;
+}
+/*  */
+.contentwrap{
+    clear: both;
+}
+table{
+    width: 500px;
+}
+.writer{
+    text-align: right;
+}
+
+.tbl{
+border-top: 1px solid #cccccc;
+border-bottom: 1px solid #cccccc;
+margin-top: 20px;
+width: 500px;
+}
+.contentwrap{
+
+}
+
+.btn3{
+margin-top: 40px;
+
+
+}
+.btn3 input{
+margin-left: 50px;
+background-color: black;
+color: white;
+border-radius: 7px;
+padding:8px 20px;
+text-align: center;
+}
+.btnt{
+    margin-right: 70px;
+
+}
+.btn4{
+text-align: center;
+margin-top: 40px;
+}
+.btn4 input{
+
+background-color: black;
+color: white;
+border-radius: 7px;
+padding:8px 20px;
+text-align: center;
+
+}
+.contentwrap{
+    margin-top: 20px;
+    text-align: center;
+}
+#ucontent{
+    
+    
+height: 500px;
+width: 500px;
+margin-top: 20px;
+
+}
+
+#utitle{
+    width:500px;
+}
+.noticeimg{
+width:50px;
+height: 50px;
+
+}
+.im{
+text-align:center;
+}
+.pwd{
+margin-left: -313px;
+margin-top: 10px;
+}
+.pwddel{
+    margin-left:  -313px;
+margin-top: 10px;
+
+}
+.pwdup{
+    margin-left: 73px;
+    margin-top: 10px;
+}
+.pwdup input{
+    width: 120px;
+
+}
+.pwddel input{
+    width: 120px;
+
+}
+.pwd input{
+width: 120px;
+}
+.wbtn{
+
+}
+.wbtn p{
+margin-left:1200px;
+color: white;
+}
+.wbtn p a{
+text-decoration: none;
+color: white;
+}
+.wbtn p a input{
+padding: 10px;
+width:100px;
+background-color: black;
+border: none;
+color: white;
+border-radius: 5px;
+}
+
+.btnback{
+    margin-left: 21px;
+}
+.datew td{
+    font-size: small;
+}
+}
+
+
+
+   

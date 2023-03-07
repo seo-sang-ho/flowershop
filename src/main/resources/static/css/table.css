@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin:0 auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+    list-style-type:none;
+}
+body html{
+    width: 100%;
+    height:100%;
+    
+}
+
+@media all and (min-width:768px){
+    table{
+        width: 95%;
+        background-color: white;
+        text-align: center;    
+        margin-top: 20px;
+        font-size: x-small;
+    }
+
+    #btn{
+        background-color: black;
+        border-radius: 5px;
+    }
+    
+    #title{
+        text-align: center;
+        margin-top: 20px;
+        font-size: x-large;
+        font-weight: 500;
+    }
+    #th{
+        background-color: black;
+        color: white;
+       
+        
+    }
+    #th th{
+        padding-top: 8px;
+        padding-bottom: 8px;
+
+    }
+    #lbtn{
+        padding-top:5px;
+        padding-bottom: 5px;
+
+    }
+    #btn{
+        color: white;
+        width: 40px;
+    }
+    .tdg{
+        cursor: pointer;
+    }
+    .tdg:hover{
+        text-decoration: underline 1px solid #000000;
+    }
+
+    .img{height: 50px;
+        width:50px;
+        
+    }
+    .imgz{
+        height: 49px;
+        width:49px;
+
+    }
+
+
+}
+
+@media all and (min-width:1080px){
+    
+    table{
+        width: 90%;
+        background-color: white;
+        text-align: center;    
+        margin-top: 20px;
+        font-size: medium;
+    }
+
+    #btn{
+        background-color: black;
+        border-radius: 5px;
+    }
+    
+    #title{
+        text-align: center;
+        margin-top: 20px;
+        font-size: x-large!important;
+        font-weight: 500;
+    }
+    #th{
+        background-color: black;
+        color: white;
+       
+        
+    }
+    #th th{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    #lbtn{
+        padding-top:5px;
+        padding-bottom: 5px;
+
+    }
+    #btn{
+        color: white;
+        width: 40px;
+    }
+    .tdg{
+        cursor: pointer;
+    }
+    .tdg:hover{
+        text-decoration: underline 1px solid #000000;
+    }
+    .img{height: 100px;
+        width:100px;
+        
+    }
+    .imgz{
+        height: 99px;
+        width:99px;
+
+    }
+
+}

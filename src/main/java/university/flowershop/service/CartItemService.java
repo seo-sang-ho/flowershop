@@ -3,6 +3,7 @@ package university.flowershop.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import university.flowershop.domain.Cart;
 import university.flowershop.domain.CartItem;
 import university.flowershop.repository.CartItemRepository;
@@ -10,6 +11,7 @@ import university.flowershop.repository.CartItemRepository;
 import java.util.List;
 
 @Service
+@Transactional
 @RequiredArgsConstructor
 public class CartItemService {
 

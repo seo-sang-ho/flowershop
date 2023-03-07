@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin:0 auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+    list-style-type:none;
+}
+body html{
+    width: 100%;
+    height:100%;
+    
+}
+
+@media all and (min-width:768px) {
+    .wrap1{
+        background-color: white;
+        width: 680px;
+        height: 1685px;
+        margin-top: 7%;
+        margin-bottom: 3%;
+        padding-top: 4%;
+    }
+    .ftitle{
+        text-align: center;
+        font-size: x-large;
+        font-weight: 500;
+    }
+    .wrap1 table{
+        width: 680px;
+        padding-top: 10px;
+        border-collapse: separate;
+        border-spacing: 0 50px;
+    }
+   
+    .imgtd{
+        width:148px;
+        height: 148px;
+    }
+    .tbl{
+        text-align: center;
+        padding-left: 20%;
+    }
+    .th{
+        background-color: black;
+        color: white;
+        padding-top:20px;
+        padding-bottom: 20px;
+        border-radius: 5px;
+    }
+    .mobtn{
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        width: 230px;
+        background: #000;
+        border-radius: 5px;
+        border: none;
+        color: white;
+    }
+    .okbtn{
+        text-align: center;
+        margin-top: 20px;
+    }
+   
+    
+}
+
+@media all and (min-width:1080px) {
+    .wrap1{
+        background-color: white;
+        width: 900px;
+        height: 1720px;
+        margin-top: 7%;
+        margin-bottom: 3%;
+        padding-top: 3%;
+    }
+    .ftitle{
+        text-align: center;
+        font-size: x-large;
+        font-weight: 500;
+    }
+    .wrap1 table{
+        width: 700px;
+        padding-top: 10px;
+        border-collapse: separate;
+        border-spacing: 0 50px;
+    }
+   
+    .imgtd{
+        width:148px;
+        height: 148px;
+    }
+    .tbl{
+        text-align: center;
+        margin-left: 20%;
+        padding-left: 0%;
+    }
+    .th{
+        background-color: black;
+        color: white;
+        padding-top:20px;
+        padding-bottom: 20px;
+        border-radius: 5px;
+    }
+    .mobtn{
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        width: 230px;
+        background: #000;
+        border-radius: 5px;
+        border: none;
+        color: white;
+    }
+    .okbtn{
+        text-align: center;
+        margin-top: 30px;
+    }
+   
+    
+}

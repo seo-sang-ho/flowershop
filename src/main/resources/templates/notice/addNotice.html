@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="www.thymeleaf.org">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,41 +16,34 @@
 
 </head>
 <!-- 공지사항 -->
+    <form method="post" th:action="@{/add/notice}" th:object="${noticeForm}">
     <body style="background-color: #e0e0e0;">
         <div id="wrap">
-            
-            <form>
                 <div  class="noticewrap">
                     <div class="noti">공지사항</div>
                     <div class="im"><img src="images/noticeimg.png" class="noticeimg"></div>
-                    <div class="title"><textarea name="title" readonly id="utitle" rows="1" cols="53" placeholder="제목" maxlength="100" required></textarea></div>
-                    
+                    <div class="title"><textarea name="title" id="title" rows="1" cols="53" placeholder="제목" maxlength="100" th:field="*{title}" required></textarea></div>
+
                     <div class="tbl">
-                        <table>
-                            <tr class="datew">
-                                <td>2023 - 03 - 01 02 : 35 : 35</td>
-                                <td class="writer">작성자</td>
-                            </tr>
-                        </table>
+                        <label for="loginId">작성자</label>
+                        <input type="text" id="loginId" name="loginId" th:value="${noticeForm.loginId}" readonly>
                     </div>
                     
                     <div class="contentwrap">
-                        <div class="contents"><div class="contents"><div class="contents"><textarea name="content" id="ucontent" readonly  rows="20" cols="57"  placeholder="내용을 입력하세요." required></textarea></div>
+                        <div class="contents"><div class="contents"><div class="contents"><textarea name="content" id="content" rows="20" cols="57"  placeholder="내용을 입력하세요." th:field="*{content}" required></textarea></div>
                     </div>
                         
                     </div>
                     <div class="btn3 btnt btnback">
                          
-                         <a href="notice.html"><input type="button" value="뒤로가기"></a>
+                         <input type="submit" value="등록하기"></a>
                          
                     </div>
                     
                 </div>
 
-
-            </form>
-
         <!--wrap끝  -->
         </div>
-</body>
+    </body>
+    </form>
 </html>
