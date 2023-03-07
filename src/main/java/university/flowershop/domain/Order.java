@@ -35,6 +35,10 @@ public class Order {
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<OrderItem> orderItems = new ArrayList<>();
 
+    // 다수의 장바구니와 연결
+    @OneToMany(mappedBy = "order")
+    private List<Cart> cartList = new ArrayList<>();
+
     private LocalDateTime orderDate; //주문 시간
 
 

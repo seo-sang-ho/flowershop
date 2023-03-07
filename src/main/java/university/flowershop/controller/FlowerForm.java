@@ -11,6 +11,9 @@ import javax.validation.constraints.NotNull;
 public class FlowerForm {
 
     @NotEmpty
+    private String prdNum;
+
+    @NotEmpty
     private String name;
 
     @NotEmpty

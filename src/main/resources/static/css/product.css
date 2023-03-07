@@ -1,0 +1,291 @@
+*{
+    padding: 0;
+    margin:0 auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+    list-style-type:none;
+}
+body html{
+    width: 100%;
+    height:100%;
+}
+
+@media all and (min-width: 768px){
+
+    #main{
+        
+        display: flex;
+        align-items: baseline;
+        
+        padding: 24px 0;
+      
+}
+.navc{
+    margin-left: 1380px;
+    margin-bottom: 1%;
+    font-size: small;
+    margin-top: 10px;
+    
+}
+.navb{
+    margin-left: 624px;
+    margin-bottom: 1%;
+    font-size: xx-small;
+    margin-top: 10px;
+
+}
+.navc a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.navb a{
+    text-decoration: none;
+    color: #000000;
+}
+.card a{
+    text-decoration: none;
+    color: #000000;
+}
+.card a:hover{
+    color: #000000;
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+.navc a:hover{
+    text-decoration: underline 1px solid #000000;
+    color:#000000;
+}
+.navb a:hover{
+    text-decoration: underline 1px solid #000000;
+    color:#000000;
+
+}
+aside{
+    flex: 0.5;
+    width:196px;
+    
+    height:600px;
+    border: 1px solid #cccccc;
+
+    /* 스크롤 고정 */
+    position: sticky;
+    top: 0;
+}
+.m1{
+    width:196px;
+}
+.m1 ul{
+    text-align: center;
+    padding-right: 35px;
+    padding-top: 10%;
+}
+/* asidemenu */
+.m1 ul li{
+    font-size: large;
+    line-height: 50px ;
+    text-align: center;
+    
+    
+}
+.m1 ul a{
+    text-decoration: none;
+    color:#000000;
+}
+.m1 ul a li:hover{
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+
+.li1{
+    font-size: 30px!important;
+   
+}
+
+header{
+    width:1000px;
+    flex: 3;
+
+    padding: 32px;
+}
+
+.title{
+    font-size: 30px;
+    margin-bottom: 116px;
+text-align: center;}
+
+
+.item_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card{
+    border: 1px solid #eee;
+    border-radius: 5px;
+    width:234px;
+    height: 400px;
+    padding:20px;
+    margin-bottom: 80px;
+   
+    }
+.img {
+        width: 180px;
+        height: 180px;
+        
+    }
+
+.img img{
+    width:180px;
+    height: 180px;
+}    
+.hrw{
+    width: 180px;
+}
+p{
+        font-size: 15px;
+    }
+
+.text{
+    text-align: left;
+    margin-left: 0;
+}
+
+
+}
+@media all and (min-width: 1080px){
+
+    #main{
+        
+            display: flex;
+            align-items: baseline;
+            
+            padding: 48px 0;
+          
+    }
+    .navc{
+        margin-left: 1380px;
+        margin-bottom: 1%;
+        font-size: small;
+        margin-top: 10px;
+        
+    }
+    .navb{
+        margin-left: 1300px;
+        margin-bottom: 1%;
+        font-size: small;
+        margin-top: 10px;
+
+    }
+    .navc a{
+        text-decoration: none;
+        color: #000000;
+    }
+
+    .navb a{
+        text-decoration: none;
+        color: #000000;
+    }
+    .card a{
+        text-decoration: none;
+        color: #000000;
+    }
+    .card a:hover{
+        color: #000000;
+        transform: scale(1.1);
+        transition-duration: 0.5s;
+    }
+    .navc a:hover{
+        text-decoration: underline 1px solid #000000;
+        color:#000000;
+    }
+    aside{
+        flex: 0.5;
+        width:280px;
+        
+        height:600px;
+        border: 1px solid #cccccc;
+
+        /* 스크롤 고정 */
+        position: sticky;
+        top: 0;
+    }
+    .m1{
+        width:280px;
+    }
+    .m1 ul{
+        text-align: center;
+        padding-right: 35px;
+        padding-top: 10%;
+    }
+    /* asidemenu */
+    .m1 ul li{
+        font-size: x-large;
+        line-height: 50px ;
+        text-align: center;
+        
+        
+    }
+    .m1 ul a{
+        text-decoration: none;
+        color:#000000;
+    }
+    .m1 ul a li:hover{
+        transform: scale(1.1);
+        transition-duration: 0.5s;
+    }
+    
+    .li1{
+        font-size: 40px!important;
+       
+    }
+
+    header{
+        width:1000px;
+        flex: 3;
+
+        padding: 32px;
+    }
+.hrw{
+    width: 220px;
+}
+    .title{
+        font-size: 40px;
+        margin-bottom: 116px;
+    text-align: center;}
+
+    
+    .item_list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card{
+        border: 1px solid #eee;
+        border-radius: 5px;
+        width:300px;
+        height: 400px;
+        padding:39px;
+        margin-bottom: 80px;
+        }
+    .img {
+            width: 221px;
+            height: 221px;
+            
+        }
+
+    .img img{
+        width:221px;
+        height: 221px;
+    }    
+    p{
+            font-size: 15px;
+        }
+    
+    .text{
+        text-align: left;
+        margin-left: 0;
+    }
+}

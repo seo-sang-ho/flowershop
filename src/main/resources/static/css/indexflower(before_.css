@@ -1,0 +1,294 @@
+*{margin: 0 auto;
+padding: 0;}
+
+@media all and (min-width: 768px){
+.which{
+    margin-left: 30%;
+}
+.logo{
+    margin-left: 7%;
+}
+.ham{
+    margin-right: 7%;
+    text-align: center;
+}
+
+/* 서브메뉴 */
+.sub{width: 100%;font-size: smaller;
+   }
+ 
+.sub a:hover{
+    color: #503c55;
+}
+.firstli{ box-sizing: border-box;
+    line-height: 30px;
+    position: relative;
+
+}
+.menu li .subul {
+    display: none;
+    background-color: white ;
+      color: white;
+    position: absolute;
+    
+}
+nav .menu li:hover .subul{
+    display: block;	
+}
+nav .menu li a{
+    display: block;		
+}
+.menu .about .subul:hover {
+    display: block;
+}
+.menu .about .subul li{
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.subul{
+    display: none;
+    text-align: center;
+    line-height: 40px;
+    padding: 0%;
+    margin-left: 75px;
+}
+
+
+/* 서브메뉴 끝 */
+#top{
+    
+    list-style: none;
+    padding-left: 70%;
+    
+}
+#topli{
+    float: left;
+    font-size: large;
+    margin: 0 7px;
+    font-family: 'Nanum Pen Script', cursive;
+    color: #000;
+    
+    
+}
+#topli:hover{
+    text-decoration: 1.5px underline #cccccc;
+}
+.navline .navli{
+    font-size: x-large;
+    font-family: 'Nanum Pen Script', cursive;
+    margin: 0px -30px;
+    width:200px;
+    text-align: center;
+	background:white;
+}
+.navline{
+    position: absolute;
+    margin-left: 75px;
+    
+}
+.navline .navli::after {position: relative; content:""; display: block; border-bottom: 2px solid #000; transition: all 250ms ease-out; left: 50%; width: 0;}
+.navline .navli:hover::after {transition: all 250ms ease-out; left: 0%; width: 100%;}
+
+a{  color: #000;
+    text-decoration: none;
+}
+a:hover{
+    color: #000;
+    
+}
+.nav1{clear: both;
+    }
+
+
+
+.footer{
+    width: 100%;
+    /*position: absolute;*/
+    bottom: 0;
+    background-color: black;
+    height: 550px;
+	
+}
+.footer2{
+    padding-top: 60px;
+	color:#ffffff;
+}
+.ft{
+color:#ffffff; font-size:8px;
+
+}
+span{
+color:#ffffff;
+}
+.fft{
+
+.flo{
+float:left;
+margin-top:60px;
+margin-left:7em;}
+
+.fg{
+float:right;
+text-align:right;
+margin-right:9em;
+font-size:10px;
+width:40px;
+
+}
+
+.fimg{
+ width:150px;
+ height:100px;
+ margin-top:0px;
+}
+
+}
+
+
+
+
+
+
+
+
+@media all and (min-width: 1080px){ 
+.which{
+    margin-left: 30%;
+}
+.logo{
+    margin-left: 7%;
+}
+.ham{
+    margin-right: 7%;
+    text-align: center;
+}
+
+/* 서브메뉴 */
+.sub{width: 100%;font-size: smaller;
+   }
+ 
+.sub a:hover{
+    color: #503c55;
+}
+.firstli{ box-sizing: border-box;
+    line-height: 30px;
+    position: relative;
+
+}
+.menu li .subul {
+    display: none;
+    background-color: white ;
+      color: white;
+    position: absolute;
+    
+}
+nav .menu li:hover .subul{
+    display: block;	
+}
+nav .menu li a{
+    display: block;		
+}
+.menu .about .subul:hover {
+    display: block;
+}
+.menu .about .subul li{
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.subul{
+    display: none;
+    text-align: center;
+    line-height: 40px;
+    padding: 0%;
+    margin-left: 75px;
+}
+
+
+/* 서브메뉴 끝 */
+#top{
+    
+    list-style: none;
+    padding-left: 70%;
+    
+}
+#topli{
+    float: left;
+    font-size: large;
+    margin: 0 7px;
+    font-family: 'Nanum Pen Script', cursive;
+    color: #000;
+    
+    
+}
+#topli:hover{
+    text-decoration: 1.5px underline #cccccc;
+}
+.navline .navli{
+    font-size: x-large;
+    font-family: 'Nanum Pen Script', cursive;
+    margin: 0px -30px;
+    width:200px;
+    text-align: center;
+	background:white;
+}
+.navline{
+    position: absolute;
+    margin-left: 75px;
+    
+}
+.navline .navli::after {position: relative; content:""; display: block; border-bottom: 2px solid #000; transition: all 250ms ease-out; left: 50%; width: 0;}
+.navline .navli:hover::after {transition: all 250ms ease-out; left: 0%; width: 100%;}
+
+a{  color: #000;
+    text-decoration: none;
+}
+a:hover{
+    color: #000;
+    
+}
+.nav1{clear: both;
+    }
+
+
+
+.footer{
+    width: 100%;
+    /*position: absolute;*/
+    bottom: 0;
+    background-color: black;
+    height: 550px;
+	
+}
+.footer2{
+    padding-top: 60px;
+	color:#ffffff;
+}
+.ft{
+color:#ffffff; font-size:10px;
+
+}
+span{
+color:#ffffff;
+}
+.fft{
+
+.flo{
+    padding-right: 50px;
+    display: flex;
+    /* justify-content: flex-end; */
+    float: right;
+    padding-top: 51px;}
+
+.fg{
+float:right;
+text-align:right;
+margin-right:3em;
+margin-top:30px;}
+
+.fimg{
+ width:249px;
+ height:142px;
+ margin-top:0px;
+}
+
+}

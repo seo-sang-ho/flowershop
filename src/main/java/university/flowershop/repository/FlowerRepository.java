@@ -26,7 +26,7 @@ public class FlowerRepository{
     }
 
     public List<Flower> findAll() {
-        return em.createQuery("select f from flower f", Flower.class)
+        return em.createQuery("select f from Flower f", Flower.class)
                 .getResultList();
     }
 
@@ -41,5 +41,6 @@ public class FlowerRepository{
         return em.createQuery("select f from Flower f where f.name like :keyword", Flower.class)
                 .setParameter("keyword", "%" + keyword + "%")
                 .getResultList();
+
     }
 }

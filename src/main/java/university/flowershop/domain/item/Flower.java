@@ -2,9 +2,7 @@ package university.flowershop.domain.item;
 
 import lombok.Getter;
 import lombok.Setter;
-import university.flowershop.domain.Cart;
-import university.flowershop.domain.Order;
-import university.flowershop.domain.Review;
+import university.flowershop.domain.*;
 import university.flowershop.exception.NotEnoughStockException;
 
 import javax.persistence.*;
@@ -24,6 +22,9 @@ public class Flower {
     private Long id;
 
     @NotNull
+    private String prdNum;
+
+    @NotNull
     private String name;
     @NotNull
     private int price;
@@ -37,7 +38,10 @@ public class Flower {
     private List<Review> reviews = new ArrayList<>();
 
     @OneToMany(mappedBy = "flower")
-    private List<Cart> carts = new ArrayList<>();
+    private List<OrderItem> orderItems = new ArrayList<>();
+
+    @OneToMany(mappedBy = "flower")
+    private List<CartItem> cartItems = new ArrayList<>();
 
     //==비즈니스 로직==/
 

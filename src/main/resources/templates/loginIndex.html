@@ -21,7 +21,7 @@
   <div id="divtop">
     <ul id="top">
       <li id="topli" th:text="|로그인: ${#session.getAttribute('loginMember').name}|">로그인된 아이디</li>
-      <li id="topli"><a href="#" target="main">장바구니</a></li>
+      <li id="topli"><a href="/cart/items" target="main">장바구니</a></li>
       <li id="topli"><a href="/members/myPage" target="main">마이페이지</a></li>
       <li id="topli"><a href="/logout" th:action="@{/logout}">로그아웃</a></li>
     </ul>
@@ -39,7 +39,7 @@
             <a class="nav-link active" aria-current="page" href="#" target="main">꽃추천</a>
           </li>
           <li class="nav-item navli">
-            <a class="nav-link active" href="#" target="main">꽃시장</a>
+            <a class="nav-link active" href="/flower/findAll" target="main">꽃시장</a>
           </li>
           <li class="nav-item navli">
             <a class="nav-link active" href="#" target="main">소품</a>

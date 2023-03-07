@@ -38,19 +38,19 @@ public class OrderItem {
 
     private int orderPrice;
 
-    private int count;
+    private int quantity;
 
-    public static OrderItem createOrderItem(Flower flower, Accessory accessory, int orderPrice, int count) {
+    public static OrderItem createOrderItem(Flower flower, Accessory accessory, int orderPrice, int quantity) {
         OrderItem orderItem = new OrderItem();
         orderItem.setFlower(flower);
         orderItem.setAccessory(accessory);
         orderItem.setOrderPrice(orderPrice);
-        orderItem.setCount(count);
+        orderItem.setQuantity(quantity);
 
         return orderItem;
     }
 
     public int getTotalPrice() {
-        return getOrderPrice() * getCount();
+        return getOrderPrice() * getQuantity();
     }
 }

@@ -35,8 +35,9 @@ public class FlowerService {
 
     //상품 수정  id description name price stockQuantity
     @Transactional
-    public void updateFlower(Long id, String name, int price, int stockQuantity, String description) {
+    public void updateFlower(Long id, String prdNum, String name, int price, int stockQuantity, String description) {
         Flower flower = flowerRepository.findById(id);
+        flower.setPrdNum(prdNum);
         flower.setName(name);
         flower.setPrice(price);
         flower.setStockQuantity(stockQuantity);

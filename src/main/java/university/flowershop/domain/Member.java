@@ -35,8 +35,8 @@ public class Member {
     @OneToMany(mappedBy = "member" , cascade = CascadeType.ALL)
     private List<Review> reviews = new ArrayList<>();
 
-    @OneToMany(mappedBy = "member")
-    private List<Cart> carts = new ArrayList<>();
+    @OneToOne(mappedBy = "member")
+    private Cart cart;
 
 
     public String getCity() {
@@ -50,6 +50,5 @@ public class Member {
     public String getZipcode() {
         return this.address.getZipcode();
     }
-
 
 }

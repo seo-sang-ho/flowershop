@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:action="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+	<link href="css/goodscss.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<form method="post" action="/cart/add/flower" >
+	<div id="wrap">
+		<div id="goods" style="width: 1100px; height: 650px;">
+			<section>
+				<article id="Prod">
+					<img
+							src="images/"
+							th:src="@{'images/'+${prdNum}+'.jpg'}"
+							style="float: left; width: 518px; height: 482px;"/>
+				</article>
+
+				<article
+						th:object="${flowers}" id="set" style="float: right; width: 500px; height: 650px;">
+					<b style="font-size: 40px;" th:text="*{name}">장미</b><br />
+					<div th:text="*{description}">설명</div>
+					<img src="/images/bar.png" /><br /><br />
+					판매가<p th:text="*{price}"></p>
+					배송비&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3,000원<br /><br />
+					<img src="/images/bar.png" /><br /><br />
+
+					<br/><br/>
+					<input type="hidden" name="flowerId" th:value="*{id}" />
+					수량
+					<input type="text" name="quantity" style="float: right; width: 390px;" placeholder="수량을 입력해 주세요. 단위 (개)" />
+					<br /><br/>
+					<img src="/images/bar.png" /><br /><br />
+					<b style="font-size: 23px;">총 구매액&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<p th:text="*{price}"></p>
+					</b><br /><br />
+					<button style="width: 200px; height: 50px; font-size: 25px; background-color: white;">
+						<a href="/cart/add/flower">장바구니담기</a>
+					</button>
+					<button style="width: 200px; height: 50px; font-size: 25px; background-color: white; margin-left: 30px;">
+						바로 구매
+					</button>
+				</article>
+			</section>
+		</div>
+		<br /><br /><br /><br />
+		<div id="main">
+			<div id="cuskeyimage">
+				<section id="cusKey"><center><img src="images/goodsKey.jpg"></center></section>
+			</div>
+
+			<div id="cusEx">
+				<section id="ex"><center><img src="images/goodsEx.jpg"></center>
+			</section>
+		</div>
+
+		<div id="customGuide" >
+			<section id="guide"><center><img  src="images/goods.jpg"></center></section>
+		</div>
+	
+		<div id="deliExp" >
+			<section id="explain"><center><img  src="images/ex.jpg"></center>
+			</section>
+		</div>
+	</div>
+</div>
+  </form>
+  </div>
+
+ </body>
+</html>

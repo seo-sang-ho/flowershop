@@ -9,6 +9,11 @@ import university.flowershop.domain.item.Flower;
 
 import javax.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import static javax.persistence.FetchType.LAZY;
+
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -19,41 +24,55 @@ public class Cart {
     @Column(name = "cart_id")
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = LAZY)
     @JoinColumn(name = "member_id")
     private Member member;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "flower_id")
     private Flower flower;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "accessory_id")
     private Accessory accessory;
 
-    private int count;
+    @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL)
+    private List<CartItem> cartItems = new ArrayList<>();
+
+    private int quantity;
+
+
+    // 다대일 매핑으로 주문과 연결
+    @ManyToOne
+    @JoinColumn(name = "order_id")
+    private Order order;
 
     @Builder
     public Cart(Member member, Flower flower,Accessory accessory, int count) {
         this.member = member;
         this.flower = flower;
         this.accessory = accessory;
-        this.count = count;
+        this.quantity = count;
 
     }
 
     // 장바구니에 상품을 추가하는 메서드
     public void addCount() {
-        this.count += 1;
+        this.quantity += 1;
     }
 
     // 장바구니에 상품을 제거하는 메서드
     public void removeCount() {
-        this.count -= 1;
+        this.quantity -= 1;
     }
 
     public void changeCount(int count) {
-        this.count = count;
+        this.quantity = count;
     }
 
+
+    public void addCartItem(CartItem cartItem) {
+        cartItem.setCart(this);
+        cartItems.add(cartItem);
+    }
 }

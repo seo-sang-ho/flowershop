@@ -24,6 +24,12 @@
                 <h1 style="font-size: 21px;">꽃 상품 추가</h1>
             </div>
             <font size="2" id="fillsu" style="float:right;">* 필수 입력 사항</font><br><br>
+
+            <div class="email">
+                <label th:for="prdNum">상품번호 *</label>
+                <input id="prdNum" type="text" placeholder="가격을 입력해 주세요." name="price" th:field="*{prdNum}">
+            </div>
+
             <div class="id">
                 <label th:for="name">상품명 *</label>
                 <a href="javascript:checkID()" style="float:right;">
