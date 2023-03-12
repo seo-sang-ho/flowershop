@@ -28,7 +28,7 @@ public class AccessoryRepository{
     }
 
     public List<Accessory> findAll() {
-        return em.createQuery("select a from accessory a", Accessory.class)
+        return em.createQuery("select a from Accessory a", Accessory.class)
                 .getResultList();
     }
 

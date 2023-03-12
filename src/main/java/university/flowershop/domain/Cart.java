@@ -16,7 +16,7 @@ import static javax.persistence.FetchType.LAZY;
 
 @Entity
 @Getter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 public class Cart {
 
     @Id
@@ -28,18 +28,9 @@ public class Cart {
     @JoinColumn(name = "member_id")
     private Member member;
 
-    @ManyToOne(fetch = LAZY)
-    @JoinColumn(name = "flower_id")
-    private Flower flower;
-
-    @ManyToOne(fetch = LAZY)
-    @JoinColumn(name = "accessory_id")
-    private Accessory accessory;
-
     @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL)
     private List<CartItem> cartItems = new ArrayList<>();
 
-    private int quantity;
 
 
     // 다대일 매핑으로 주문과 연결
@@ -47,32 +38,13 @@ public class Cart {
     @JoinColumn(name = "order_id")
     private Order order;
 
-    @Builder
-    public Cart(Member member, Flower flower,Accessory accessory, int count) {
-        this.member = member;
-        this.flower = flower;
-        this.accessory = accessory;
-        this.quantity = count;
-
-    }
-
-    // 장바구니에 상품을 추가하는 메서드
-    public void addCount() {
-        this.quantity += 1;
-    }
-
-    // 장바구니에 상품을 제거하는 메서드
-    public void removeCount() {
-        this.quantity -= 1;
-    }
-
-    public void changeCount(int count) {
-        this.quantity = count;
-    }
-
-
     public void addCartItem(CartItem cartItem) {
-        cartItem.setCart(this);
+        if (cartItems == null) {
+            cartItems = new ArrayList<>();
+        }
         cartItems.add(cartItem);
+        cartItem.setCart(this);
     }
 }
+
+

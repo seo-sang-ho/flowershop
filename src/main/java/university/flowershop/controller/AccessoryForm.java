@@ -11,14 +11,17 @@ import javax.validation.constraints.NotNull;
 public class AccessoryForm {
 
     @NotEmpty
+    private String prdNum;
+
+    @NotEmpty
     private String name;
 
     @NotEmpty
-    private String accessoryKind;
+    private String AccessoryKind;
 
     @NotNull
     private int price;
-    
+
     @NotNull
     private int stockQuantity;
 

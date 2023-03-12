@@ -3,37 +3,50 @@
 <head>
 	<meta charset="UTF-8" />
 	<title></title>
-	<link href="css/goodscss.css" rel="stylesheet" type="text/css" />
+	<link href="/css/goodscss.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <form method="post" action="/cart/add/flower" >
 	<div id="wrap">
 		<div id="goods" style="width: 1100px; height: 650px;">
 			<section>
-				<article id="Prod">
-					<img
-							src="images/"
-							th:src="@{'images/'+${prdNum}+'.jpg'}"
-							style="float: left; width: 518px; height: 482px;"/>
+				<article id="Prod" th:object="${flowers}">
+					<img th:src="@{/images/__${flowers.prdNum}__.jpg}" style="float: left; width: 518px; height: 482px;"/>
 				</article>
+
 
 				<article
 						th:object="${flowers}" id="set" style="float: right; width: 500px; height: 650px;">
 					<b style="font-size: 40px;" th:text="*{name}">장미</b><br />
 					<div th:text="*{description}">설명</div>
 					<img src="/images/bar.png" /><br /><br />
-					판매가<p th:text="*{price}"></p>
+					판매가<p th:text="*{price}" name="price" id="price"></p>
 					배송비&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3,000원<br /><br />
 					<img src="/images/bar.png" /><br /><br />
 
 					<br/><br/>
 					<input type="hidden" name="flowerId" th:value="*{id}" />
 					수량
-					<input type="text" name="quantity" style="float: right; width: 390px;" placeholder="수량을 입력해 주세요. 단위 (개)" />
+					<select name="quantity" onchange="updateTotalPrice()">
+						<option value="1">1개</option>
+						<option value="2">2개</option>
+						<option value="3">3개</option>
+						<option value="4">4개</option>
+						<option value="5">5개</option>
+					</select>
+
+					<script>
+function updateTotalPrice() {
+    var price = document.getElementById("price").textContent;
+    var quantity = document.getElementsByName("quantity")[0].value;
+    var totalPrice = price * quantity;
+    document.getElementById("totalPrice").textContent = totalPrice;
+}
+</script>
 					<br /><br/>
 					<img src="/images/bar.png" /><br /><br />
 					<b style="font-size: 23px;">총 구매액&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<p th:text="*{price}"></p>
+						<span id="totalPrice" th:text="${flowers.price}"></span>
 					</b><br /><br />
 					<button style="width: 200px; height: 50px; font-size: 25px; background-color: white;">
 						<a href="/cart/add/flower">장바구니담기</a>

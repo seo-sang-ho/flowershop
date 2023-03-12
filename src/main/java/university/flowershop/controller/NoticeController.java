@@ -15,6 +15,7 @@ import university.flowershop.session.SessionConst;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
@@ -26,7 +27,7 @@ public class NoticeController {
     @GetMapping("/noticeForm")
     public String noticeForm(Model model, HttpSession httpSession) {
         NoticeForm noticeForm = new NoticeForm();
-        String loginId = (String) httpSession.getAttribute(SessionConst.LOGIN_MEMBER);
+        Object loginId =  httpSession.getAttribute(SessionConst.LOGIN_MEMBER);
         noticeForm.setLoginId(loginId);
         model.addAttribute("noticeForm", noticeForm);
         return "notice/addNotice";
@@ -48,5 +49,13 @@ public class NoticeController {
         log.info("공지사항 작성 메서드 실행");
 
         return "redirect:/notice/noticeDetail";
+    }
+
+    // 공지사항 페이지
+    @GetMapping("/noticeAll")
+    public String noticeAll(Model model) {
+        List<Notice> notices = noticeService.showNotice();
+        model.addAttribute("notices", notices);
+        return "notice/NoticeAll";
     }
 }

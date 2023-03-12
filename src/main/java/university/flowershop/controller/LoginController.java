@@ -51,6 +51,7 @@ public class LoginController {
         //세션에 로그인 회원 정보 보관
         session.setAttribute(SessionConst.LOGIN_MEMBER, loginMember);
 
+
         //세션 관리자를 통해 세션를 생성하고, 회원 데이터 보관
 //        sessionManager.createSession(loginMember,response);
 

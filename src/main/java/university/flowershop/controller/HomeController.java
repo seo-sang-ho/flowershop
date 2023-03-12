@@ -56,4 +56,9 @@ public class HomeController {
     public String brand() {
         return "brand";
     }
+
+    @GetMapping("/flower/recommend")
+    public String recommend() {
+        return "ai";
+    }
 }

@@ -119,18 +119,31 @@ public class MemberController {
     }
 
     @PostMapping("/members/myPage/edit")
-    public String updateMember(@ModelAttribute("memberForm") MemberForm memberForm, HttpSession session) {
+    public String updateMember(@ModelAttribute("memberForm") MemberForm memberForm, HttpSession session, Model model) {
         // HttpSession에서 로그인한 멤버 정보를 가져옵니다.
         Member loginMember = (Member) session.getAttribute(SessionConst.LOGIN_MEMBER);
 
+
         // 수정할 회원 정보를 MemberForm에서 가져와서 Member 객체로 변환합니다.
 
+        Address address = new Address(memberForm.getCity(), memberForm.getStreet(), memberForm.getZipcode());
+
+        Member member = new Member();
+        member.setId(loginMember.getId());
+        member.setName(memberForm.getName());
+        member.setPhone(memberForm.getPhone());
+        member.setLoginId(memberForm.getLoginId());
+        member.setPassword(memberForm.getPassword());
+        member.setEmail(memberForm.getEmail());
+        member.setAddress(address);
 
         // MemberService를 사용하여 회원 정보를 업데이트합니다.
+        memberService.updateMember(member);
 
         // 마이페이지로 리다이렉트합니다.
         return "redirect:/members/myPage";
     }
+
 
 
 

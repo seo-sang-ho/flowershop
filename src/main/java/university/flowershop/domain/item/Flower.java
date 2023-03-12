@@ -34,6 +34,7 @@ public class Flower {
     @Column(columnDefinition = "TEXT")
     private String description;
 
+
     @OneToMany(mappedBy = "flower" , cascade = CascadeType.ALL)
     private List<Review> reviews = new ArrayList<>();
 

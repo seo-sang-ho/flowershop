@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>마이페이지</title>
+    <title>회원 정보 수정</title>
 
     <meta charset="utf-8">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../css/member.css" rel="stylesheet" type="text/css">
+    <link href="/css/member.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700&display=swap" rel="stylesheet">
@@ -45,13 +45,13 @@
         <div class="wrapper" >
 
 
-            <div class="title"><h1 style="font-size: 21px;">회원정보</h1></div>		   <br><br>
+            <div class="title"><h1 style="font-size: 21px;">회원정보수정</h1></div>		   <br><br>
             <input type="hidden" name="memberId" th:field="*{id}"/>
             <div style="width:100%; float:left; padding-left:70px;">
                 <div style=" float:left;padding-right:30px;">
                     아이디 	</div>
                 <div style="width: 50%;float:right; margin-right:30px; height:30px; background-color:white;border: 1px solid black; border-radius: 1em;">
-                    <input type="text" th:field="*{loginId}" style="border: none;" readonly></div>
+                    <input type="text" th:field="*{loginId}" style="border: none;" ></div>
 
             </div>
 
@@ -71,7 +71,7 @@
                 <div style=" float:left;padding-right:30px;">
                     이메일 </div>
                 <div style="width: 50%;float:right; margin-right:30px; height:30px; background-color:white;border: 1px solid black; border-radius: 1em;">
-                    <input type="text" th:field="*{email}" style="border: none;" readonly></div>
+                    <input type="text" th:field="*{email}" style="border: none;" ></div>
 
             </div>
             <br> <br><br>
@@ -81,7 +81,7 @@
                 <div style=" float:left;padding-right:30px;">
                     이름 </div>
                 <div style="width: 50%;float:right; margin-right:30px; height:30px; background-color:white;border: 1px solid black; border-radius: 1em;">
-                    <input type="text" th:field="*{name}" style="border: none;" readonly>  </div>
+                    <input type="text" th:field="*{name}" style="border: none;" >  </div>
 
             </div>
             <br> <br><br>
@@ -90,7 +90,7 @@
                 <div style=" float:left;padding-right:30px;">
                     핸드폰 번호</div>
                 <div style="width: 50%;float:right; margin-right:30px; height:30px; background-color:white;border: 1px solid black; border-radius: 1em;">
-                    <input type="text" th:field="*{phone}" style="border: none;" readonly></div>
+                    <input type="text" th:field="*{phone}" style="border: none;" ></div>
 
             </div>
 
@@ -99,7 +99,7 @@
 
                     주소 </div>
                 <div style="width: 50%;float:right; margin-right:30px; height:30px; background-color:white;border: 1px solid black; border-radius: 1em;">
-                    <input type="text" th:field="*{city}" style="border: none;" readonly></div>
+                    <input type="text" th:field="*{city}" style="border: none;" ></div>
 
             </div>
             <br> <br><br>
@@ -109,7 +109,7 @@
                 <div style=" float:left;padding-right:30px;">
                     상세주소</div>
                 <div style="width: 50%;float:right; margin-right:30px; height:30px; background-color:white;border: 1px solid black; border-radius: 1em;">
-                    <input type="text" th:field="*{street}" style="border: none;" readonly></div>
+                    <input type="text" th:field="*{street}" style="border: none;" ></div>
 
             </div>
             <br> <br><br>
@@ -118,7 +118,7 @@
                 <div style=" float:left;padding-right:30px;">
                     우편번호</div>
                 <div style="width: 50%;float:right; margin-right:30px; height:30px; background-color:white;border: 1px solid black; border-radius: 1em;">
-                    <input type="text" th:field="*{zipcode}" style="border: none;" readonly></div>
+                    <input type="text" th:field="*{zipcode}" style="border: none;" ></div>
 
             </div>
 

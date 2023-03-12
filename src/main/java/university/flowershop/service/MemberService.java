@@ -60,14 +60,8 @@ public class MemberService {
         return memberRepository.findPasswordByNameLoginId(name, loginId);
     }
 
-    public void updateMember(Long memberId, String name, String loginId, String password, String phone, String email, String city, String street, String zipcode) {
-        Member member = memberRepository.findOne(memberId);
-        member.setName(name);
-        member.setLoginId(loginId);
-        member.setPassword(password);
-        member.setPhone(phone);
-        member.setEmail(email);
-        member.setAddress(new Address(city,street,zipcode));
+    public void updateMember(Member member) {
+        memberRepository.updateMember(member);
     }
 
     @PostConstruct

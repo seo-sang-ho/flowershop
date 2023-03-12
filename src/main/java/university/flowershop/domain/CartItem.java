@@ -30,5 +30,4 @@ public class CartItem {
 
     private int quantity;
 
-    private Long memberId;
 }

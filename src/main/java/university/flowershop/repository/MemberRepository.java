@@ -63,4 +63,19 @@ public class MemberRepository {
                 .filter(m -> m.getLoginId().equals(loginId))
                 .findFirst();
     }
+
+    public void updateMember(Member member) {
+        em.createQuery("UPDATE Member m SET m.name = :name, m.phone = :phone, m.loginId = :loginId, m.password = :password, m.email = :email, m.address.city = :city, m.address.street = :street, m.address.zipcode = :zipcode WHERE m.id = :id")
+                .setParameter("name", member.getName())
+                .setParameter("phone", member.getPhone())
+                .setParameter("loginId", member.getLoginId())
+                .setParameter("password", member.getPassword())
+                .setParameter("email", member.getEmail())
+                .setParameter("city", member.getAddress().getCity())
+                .setParameter("street", member.getAddress().getStreet())
+                .setParameter("zipcode", member.getAddress().getZipcode())
+                .setParameter("id", member.getId())
+                .executeUpdate();
+    }
+
 }

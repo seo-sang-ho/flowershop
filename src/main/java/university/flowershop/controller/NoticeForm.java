@@ -15,5 +15,6 @@ public class NoticeForm {
     @NotEmpty
     private String content;
 
-    private String loginId;
+
+    private Object loginId;
 }
