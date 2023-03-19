@@ -8,7 +8,6 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
@@ -18,7 +17,7 @@ import java.util.Optional;
 public class Accessory {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "accessory_id")
     private Long id;
 
