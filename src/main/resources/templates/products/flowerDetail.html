@@ -46,10 +46,11 @@ function updateTotalPrice() {
 					<br /><br/>
 					<img src="/images/bar.png" /><br /><br />
 					<b style="font-size: 23px;">총 구매액&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<span id="totalPrice" th:text="${flowers.price}"></span>
+						<span id="totalPrice" name="totalPrice" th:text="${flowers.price}">
+
 					</b><br /><br />
-					<button style="width: 200px; height: 50px; font-size: 25px; background-color: white;">
-						<a href="/cart/add/flower">장바구니담기</a>
+					<button type=submit style="width: 200px; height: 50px; font-size: 25px; background-color: white;">
+						장바구니담기
 					</button>
 					<button style="width: 200px; height: 50px; font-size: 25px; background-color: white; margin-left: 30px;">
 						바로 구매

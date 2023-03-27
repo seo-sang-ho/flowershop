@@ -51,26 +51,24 @@
 					<td>수량</td>
 					<td>선택</td>
 				</tr>
-				<tr style="border:none;" th:each="item: ${cartItems}">
-					
-					<Td><a href="#"><img src="/images/logo.png" style="height:50px; width:50px;">
-		  </a></Td>
-					<Td th:text="*{item.name}">상품명</Td>
-					<Td  colspan="3" th:text="*{item.description}">상품 설명</Td>
-					<td th:text="*{item.price}">가격</td>
-					<td></td>
-				 <td><a href="#" style=" border-radius: 2px; padding:  10px; background-color:black; color:white;">삭제</a></td>
-				</tr>
-<tr style="height: 80px;"> <td   colspan="7"></td></tr>
+
+
+	<tr style="border:none;" th:each="cartItem: ${cartItems}">
+		<td><a href="#"><img src="/images/logo.png" style="height:50px; width:50px;"></a></td>
+		<td th:if="${cartItem.getFlower() != null}" th:text="${cartItem.getFlower().getName()}"></td>
+		<td th:if="${cartItem.getAccessory() != null}" th:text="${cartItem.getAccessory().getName()}"></td>
+		<td colspan="3" th:text="${cartItem.getQuantity()}">상품 설명</td>
+		<td th:if="${cartItem.getFlower() != null}" th:text="${cartItem.getFlower().getPrice()}"></td>
+		<td th:if="${cartItem.getAccessory() != null}" th:text="${cartItem.getAccessory().getPrice()}"></td>
+		<td><a href="#" style="border-radius: 2px; padding: 10px; background-color:black; color:white;">삭제</a></td>
+	</tr>
+
+
+	<tr style="height: 80px;"> <td   colspan="7"></td></tr>
 
 <tr>
-	<td rowspan="5"  colspan="4" style="text-align: center;"><b>총 주문금액</b></td> 
-            <td style="text-align: left;" colspan="3">주문상품 수</td> 
-			<td >n개</td> 
-			</tr>
-<tr>
-	   <td style="text-align: left;"  colspan="3">주문금액</td> 
-			<td  >원</td>
+	   <td style="text-align: left;"  colspan="3">주문금액</td>
+	<td  >원</td>
 			</tr>
 
 <tr>
@@ -83,7 +81,7 @@
 			<td >3000원</td>
 			</tr>
 <tr>
-	   <td style="text-align: left;" colspan="3"><h4>전체 주문총액</h4></td> 
+	   <td style="text-align: left;" colspan="3"><h4>총 결제금액</h4></td>
 			<td ><b style="font-size:15px; color:red;"  >n</b><b>원</b></td> 
 			</tr>
 
@@ -91,7 +89,7 @@
 	   <td colspan="5"> 
 	   <a href="#"  style="background-color:black; color:white; border-radius: 2px; padding:  10px;"><font size=2>비우기</font></a></td> 
 
-			<td ><a href="#"  style="background-color:black; color:white; border-radius: 2px; padding:  10px; "><font size=2>주문하기</font></a></td> 
+			<td ><a href="/order/{cartId}"  style="background-color:black; color:white; border-radius: 2px; padding:  10px; "><font size=2>주문하기</font></a></td>
 			</tr>
 
 

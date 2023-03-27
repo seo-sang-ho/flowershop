@@ -17,7 +17,7 @@ import java.util.List;
 public class Flower {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "flower_id")
     private Long id;
 

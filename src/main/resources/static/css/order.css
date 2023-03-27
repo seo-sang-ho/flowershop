@@ -70,7 +70,7 @@ tr{
 .paybtn{width: 30%;
   height: 50px;
   font-size: larger;
-  background-color: rgb(127, 95, 131);
+  background-color: #F19DAD;
   border: none;
   margin-top: 10%;
   border-radius: 7px;
@@ -79,11 +79,11 @@ tr{
 
 }
 .paybtn:focus {
-    background-color: rgb(114, 77, 124);
+    background-color: #F19DAD;
     }
     
 .paybtn:hover{
-    background:rgb(119, 89, 139);
+    background: #F2AABB;
 }    
 #paybtnd{
     

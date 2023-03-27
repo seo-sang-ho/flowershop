@@ -190,7 +190,7 @@ $('.image-upload-wrap').bind('dragover', function () {
 
 
 
-
+<!-- 지우기 버튼을 클릭하면 지금 나와있는 결과의 내용도 삭제해야됨 아마 캐쉬 삭제? -->
 
 
 
@@ -203,7 +203,7 @@ $('.image-upload-wrap').bind('dragover', function () {
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
     // the link to your model provided by Teachable Machine export panel
-    const URL = "https://teachablemachine.withgoogle.com/models/9KAx6FdaY/";
+    const URL = "https://teachablemachine.withgoogle.com/models/zgGwH7F8z/";
 
     let model, webcam, labelContainer, maxPredictions;
 
@@ -231,9 +231,9 @@ $('.image-upload-wrap').bind('dragover', function () {
         var image = document.getElementById("face-image")
         const prediction = await model.predict(image,false);
 
-        if(prediction[0].className == "whiteRoom" && prediction[0].probability.toFixed(2) <= 1.00){
+        if(prediction[0].className == "whiteRoom" && prediction[0].probability.toFixed(2) >= 0.50){
             labelContainer.childNodes[0].innerHTML = "밝은 방에 어울리는 백합입니다.";
-        }else if(prediction[1].className == "blackRoom" && prediction[1].probability.toFixed(2) <= 1.00){
+        }else if(prediction[1].className == "blackRoom" && prediction[1].probability.toFixed(2) >= 0.50){
             labelContainer.childNodes[0].innerHTML = "어두운 방에 어울리는 오향나무입니다.";
         }else{
             labelContainer.childNodes[0].innerHTML = "알 수 없음";

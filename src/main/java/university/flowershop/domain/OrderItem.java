@@ -15,7 +15,7 @@ import static javax.persistence.FetchType.*;
 @Entity
 @Getter
 @Setter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 public class OrderItem {
 
     @Id
@@ -40,17 +40,12 @@ public class OrderItem {
 
     private int quantity;
 
-    public static OrderItem createOrderItem(Flower flower, Accessory accessory, int orderPrice, int quantity) {
+    public static OrderItem createOrderItem(CartItem cartItem) {
         OrderItem orderItem = new OrderItem();
-        orderItem.setFlower(flower);
-        orderItem.setAccessory(accessory);
-        orderItem.setOrderPrice(orderPrice);
-        orderItem.setQuantity(quantity);
+        orderItem.setFlower(cartItem.getFlower());
+        orderItem.setAccessory(cartItem.getAccessory());
+        orderItem.setQuantity(cartItem.getQuantity());
 
         return orderItem;
-    }
-
-    public int getTotalPrice() {
-        return getOrderPrice() * getQuantity();
     }
 }

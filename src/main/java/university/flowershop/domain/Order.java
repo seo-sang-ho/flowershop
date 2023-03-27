@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.aspectj.weaver.ast.Or;
+import university.flowershop.controller.OrderForm;
 
 import javax.persistence.*;
 
@@ -19,11 +20,11 @@ import static javax.persistence.FetchType.LAZY;
 @Table(name = "orders")
 @Getter
 @Setter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 public class Order {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "order_id")
     private Long id;
 
@@ -34,10 +35,6 @@ public class Order {
     @JsonIgnore
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<OrderItem> orderItems = new ArrayList<>();
-
-    // 다수의 장바구니와 연결
-    @OneToMany(mappedBy = "order")
-    private List<Cart> cartList = new ArrayList<>();
 
     private LocalDateTime orderDate; //주문 시간
 
@@ -50,6 +47,10 @@ public class Order {
     @Enumerated(EnumType.STRING)
     private PaymentMethod paymentMethod;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "recipient_id")
+    private Recipient recipient;
+
     public void setMember(Member member) {
         this.member = member;
         member.getOrders().add(this);
@@ -60,23 +61,28 @@ public class Order {
         orderItem.setOrder(this);
     }
 
-    public static Order createOrder(Member member, OrderItem... orderItems) {
+    public static Recipient createReceiver(String name, String phoneNumber, String address, String detailAddress, String zipcode) {
+        Recipient recipient = new Recipient();
+        recipient.setName(name);
+        recipient.setPhone(phoneNumber);
+        recipient.setAddress(address);
+        recipient.setDetailAddress(detailAddress);
+        recipient.setZipcode(zipcode);
+        return recipient;
+    }
+
+    public static Order createOrder(Member member, Recipient recipient, List<OrderItem> orderItems) {
         Order order = new Order();
         order.setMember(member);
+        order.setRecipient(recipient);
+        order.setStatus(OrderStatus.ORDERED);
+        order.setOrderDate(LocalDateTime.now());
+
         for (OrderItem orderItem : orderItems) {
             order.addOrderItem(orderItem);
         }
-        order.setStatus(OrderStatus.ORDER);
-        order.setOrderDate(LocalDateTime.now());
-        return order;
-    }
 
-    public int getTotalPrice() {
-        int totalPrice=0;
-        for (OrderItem orderItem : orderItems) {
-            totalPrice += orderItem.getOrderPrice();
-        }
-        return totalPrice;
+        return order;
     }
 }
 

@@ -1,6 +1,7 @@
 package university.flowershop.service;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -9,11 +10,13 @@ import university.flowershop.domain.item.Flower;
 import university.flowershop.repository.AccessoryRepository;
 import university.flowershop.repository.FlowerRepository;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Service
 @Transactional
 @RequiredArgsConstructor
+@Slf4j
 public class AccessoryService {
 
     @Autowired
@@ -56,5 +59,20 @@ public class AccessoryService {
     @Transactional
     public List<Accessory> searchAccessory(String keyword) {
         return accessoryRepository.Search(keyword);
+    }
+
+
+    @PostConstruct
+    public void initAccessory() {
+        Accessory accessory = new Accessory();
+        accessory.setPrdNum("3");
+        accessory.setName("물뿌리개");
+        accessory.setPrice(2000);
+        accessory.setDescription("물뿌리개입니다.");
+        accessory.setStockQuantity(20);
+
+        accessoryRepository.save(accessory);
+
+        log.info("소품 상품 추가되는 로그");
     }
 }

@@ -2,12 +2,14 @@ package university.flowershop.repository;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import university.flowershop.domain.item.Flower;
 
 import javax.persistence.EntityManager;
 import java.util.List;
 
 @Repository
+@Transactional
 @RequiredArgsConstructor
 public class FlowerRepository{
 

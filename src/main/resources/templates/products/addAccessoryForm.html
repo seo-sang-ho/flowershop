@@ -37,8 +37,11 @@
                 <input placeholder="상품명을 입력해 주세요." id="name" type="text" name="name" th:field="*{name}">
                 <div id="idError" class="error"></div>
                 <div class="password">
-                    <label th:for="accessoryKind">상품 종류 *</label>
-                    <input id="flowerKind" type="text" name="accessoryKind" placeholder="상품 종류를 입력해 주세요." th:field="*{accessoryKind}">
+                    <label th:for="flowerKind">상품 종류 *</label>
+                    <select name="flowerKind" th:field="*{flowerKind}">
+                        <option value="꽃">꽃</option>
+                        <option value="소품">소품</option>
+                    </select>
                     <div id="passwordError" class="error"></div>
                 </div>
             </div>

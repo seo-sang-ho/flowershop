@@ -7,9 +7,11 @@ import university.flowershop.domain.item.Accessory;
 import university.flowershop.domain.item.Flower;
 
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Repository
+@Transactional
 @RequiredArgsConstructor
 public class AccessoryRepository{
 

@@ -1,17 +1,20 @@
 package university.flowershop.service;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import university.flowershop.domain.item.Flower;
 import university.flowershop.repository.FlowerRepository;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Service
 @Transactional
 @RequiredArgsConstructor
+@Slf4j
 public class FlowerService {
 
     @Autowired
@@ -56,4 +59,21 @@ public class FlowerService {
     public List<Flower> searchFlower(String keyword) {
         return flowerRepository.Search(keyword);
     }
+
+    @PostConstruct
+    public void initFlower() {
+        Flower flower = new Flower();
+        flower.setId(2L);
+        flower.setPrdNum("2");
+        flower.setName("백합");
+        flower.setPrice(20000);
+        flower.setDescription("이쁜 꽃입니다.");
+        flower.setStockQuantity(20);
+
+        flowerRepository.save(flower);
+
+        log.info("꽃 상품 추가되는 로그");
+    }
 }
+
+

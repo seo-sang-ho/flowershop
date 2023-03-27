@@ -1,9 +1,6 @@
 package university.flowershop.domain;
 
-import lombok.AccessLevel;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import university.flowershop.domain.item.Accessory;
 import university.flowershop.domain.item.Flower;
 
@@ -16,11 +13,12 @@ import static javax.persistence.FetchType.LAZY;
 
 @Entity
 @Getter
+@Setter
 @NoArgsConstructor
 public class Cart {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "cart_id")
     private Long id;
 
@@ -32,19 +30,17 @@ public class Cart {
     private List<CartItem> cartItems = new ArrayList<>();
 
 
-
     // 다대일 매핑으로 주문과 연결
     @ManyToOne
     @JoinColumn(name = "order_id")
     private Order order;
 
-    public void addCartItem(CartItem cartItem) {
-        if (cartItems == null) {
-            cartItems = new ArrayList<>();
-        }
+    //cartItem에 있는 정보를 cart에 저장
+    public void addItem(CartItem cartItem) {
         cartItems.add(cartItem);
         cartItem.setCart(this);
     }
+
 }
 
 

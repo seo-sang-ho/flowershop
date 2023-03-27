@@ -38,7 +38,10 @@
                 <div id="idError" class="error"></div>
                 <div class="password">
                     <label th:for="flowerKind">상품 종류 *</label>
-                    <input id="flowerKind" type="text" name="flowerKind" placeholder="상품 종류를 입력해 주세요." th:field="*{flowerKind}">
+                    <select name="flowerKind" th:field="*{flowerKind}">
+                        <option value="꽃">꽃</option>
+                        <option value="소품">소품</option>
+                    </select>
                     <div id="passwordError" class="error"></div>
                 </div>
             </div>

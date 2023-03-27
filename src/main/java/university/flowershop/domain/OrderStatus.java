@@ -2,5 +2,5 @@ package university.flowershop.domain;
 
 public enum OrderStatus {
 
-    ORDER, CANCEL,
+    ORDER, CANCEL, ORDERED,
 }

@@ -12,7 +12,8 @@ import javax.persistence.*;
 @Getter @Setter
 public class CartItem {
 
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "cartItem_id")
     private Long id;
 
@@ -30,4 +31,13 @@ public class CartItem {
 
     private int quantity;
 
+    public double getTotalPrice() {
+        if (flower != null) {
+            return flower.getPrice() * quantity;
+        } else if (accessory != null) {
+            return accessory.getPrice() * quantity;
+        } else {
+            return 0;
+        }
+    }
 }

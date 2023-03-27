@@ -61,4 +61,11 @@ public class HomeController {
     public String recommend() {
         return "ai";
     }
+
+    @GetMapping("/order")
+    public String order() {
+        return "order/order";
+    }
+
 }
+
